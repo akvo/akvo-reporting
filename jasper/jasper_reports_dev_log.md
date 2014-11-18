@@ -148,10 +148,9 @@ To summarize (skipping the base Jasper server URI, e.g. http://localhost:8080/ja
 
 ### Installing the server
 
-apt-get install nano
-apt-get install aptitude
-aptitude install openjdk-7-jdk
-Put ```deb http://apt.postgresql.org/pub/repos/apt/ squeeze-pgdg main 9.4``` into /etc/apt/sources.list.d/pgdg.list
-after aptitude update do
-aptitude install postgresql-9.4
- 
+* apt-get install nano
+* apt-get install aptitude
+* aptitude install openjdk-7-jdk
+* Put ```deb http://apt.postgresql.org/pub/repos/apt/ squeeze-pgdg main 9.4``` into /etc/apt/sources.list.d/pgdg.list
+* after aptitude update do
+* aptitude install postgresql-9.4
