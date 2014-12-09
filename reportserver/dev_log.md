@@ -13,13 +13,12 @@ apt-get install tomcat7
 from /etc/init.d/tomcat7:
 
 NAME=tomcat7
-> # Directory where the Tomcat 6 binary distribution resides
+> \# Directory where the Tomcat 6 binary distribution resides
 > CATALINA_HOME=/usr/share/$NAME
-
-> # Directory for per-instance configuration files and webapps
+> \# Directory for per-instance configuration files and webapps
 > CATALINA_BASE=/var/lib/$NAME
 
-CATALINA_BASE/conf is a soft link to /etc/tomcat7, so the server.xml there is the global config file
+$CATALINA_BASE/conf is a soft link to /etc/tomcat7, so the server.xml there is the global config file
 it opens port 8080 only
 
 ### Modified Java settings
@@ -44,6 +43,11 @@ Stopped Tomcat
 
 unzipped files into /var/lib/tomcat/webapps/reportserver/
 
+Observed server runs psql 9.4rc1
+> pgsql --version
 
+Found a postgresql-9.1-901.jdbc4.jar in the WEB-INF/lib and decided to test using that db driver.
+Otherwise I would have fetched http://jdbc.postgresql.org/download/postgresql-9.3-1102.jdbc41.jar 
+	(found on http://jdbc.postgresql.org/download.html)
 
 
