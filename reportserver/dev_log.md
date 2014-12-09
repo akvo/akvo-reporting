@@ -51,7 +51,7 @@ PostgreSQL 9.4rc1 was already installed, and running on the normal port, 5432:
 
 Found a postgresql-9.1-901.jdbc4.jar that came with rs in the WEB-INF/lib and decided to test using that db driver.
 
-Otherwise I would have fetched `http://jdbc.postgresql.org/download/postgresql-9.3-1102.jdbc41.jar`
+Otherwise I would have fetched http://jdbc.postgresql.org/download/postgresql-9.3-1102.jdbc41.jar
 
 (which I found on http://jdbc.postgresql.org/download.html)
 
@@ -59,7 +59,7 @@ Otherwise I would have fetched `http://jdbc.postgresql.org/download/postgresql-9
 
 I located the appropriate datbase creation script:
 
-    ddl/reportserver-RS2.1.6-5543-schema-PostgreSQL_CREATE.sql
+    webapps/reportserver/ddl/reportserver-RS2.1.6-5543-schema-PostgreSQL_CREATE.sql
 
 The database name can be anything.
 
@@ -85,11 +85,11 @@ Tables and sequences were all owned by 'foo'.
 
 edit `webapps/reportserver/WEB-INF/classes/META-INF/persistence.xml` like this:
 
-<property name="hibernate.connection.url" value="jdbc:postgresql://localhost/reportserver" />
-<property name="hibernate.connection.driver_class" value="org.postgresql.Driver" />
-<property name="hibernate.connection.username" value="foo" />
-<property name="hibernate.connection.password" value="bar" />
-<property name="hibernate.dialect" value="org.hibernate.dialect.PostgreSQLDialect" />
+    <property name="hibernate.connection.url" value="jdbc:postgresql://localhost/reportserver" />
+    <property name="hibernate.connection.driver_class" value="org.postgresql.Driver" />
+    <property name="hibernate.connection.username" value="foo" />
+    <property name="hibernate.connection.password" value="bar" />
+    <property name="hibernate.dialect" value="org.hibernate.dialect.PostgreSQLDialect" />
 
 
 
