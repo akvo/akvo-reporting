@@ -13,11 +13,11 @@ apt-get install tomcat7
 from /etc/init.d/tomcat7:
 
 NAME=tomcat7
-# Directory where the Tomcat 6 binary distribution resides
-CATALINA_HOME=/usr/share/$NAME
+> # Directory where the Tomcat 6 binary distribution resides
+> CATALINA_HOME=/usr/share/$NAME
 
-# Directory for per-instance configuration files and webapps
-CATALINA_BASE=/var/lib/$NAME
+> # Directory for per-instance configuration files and webapps
+> CATALINA_BASE=/var/lib/$NAME
 
 CATALINA_BASE/conf is a soft link to /etc/tomcat7, so the server.xml there is the global config file
 it opens port 8080 only
@@ -32,4 +32,18 @@ Installed nginx to handle ssl
 -----------------------------
 
 Sends all https traffic (port 443) to 8080
+
+Install Reportserver
+--------------------
+
+Downloaded 201 MB of zip archive of the latest stable report server from
+>	http://sourceforge.net/projects/dw-rs/files/bin/2.1/RS2.1.6-5543-reportserver.zip/download
+
+Stopped Tomcat
+> /etc/init.d/tomcat7 stop
+
+unzipped files into /var/lib/tomcat/webapps/reportserver/
+
+
+
 
