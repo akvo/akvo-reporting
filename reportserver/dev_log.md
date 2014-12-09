@@ -6,7 +6,6 @@ How the reportserver was installed
     http://sourceforge.net/projects/dw-rs/files/2013-08-12-reportserver-configguide.pdf/download
 
 ## Installed Tomcat7 ##
------------------
 
 apt-get install tomcat7
 
@@ -46,11 +45,11 @@ Stopped Tomcat
 
 unzipped files into /var/lib/tomcat/webapps/reportserver/
 
-Observed server runs psql 9.4rc1
+PostgreSQL 9.4rc1 was already installed, and running on the normal port, 5432:
 
-    pgsql --version
+    psql --version
 
-Found a postgresql-9.1-901.jdbc4.jar in the WEB-INF/lib and decided to test using that db driver.
+Found a postgresql-9.1-901.jdbc4.jar that came with rs in the WEB-INF/lib and decided to test using that db driver.
 
 Otherwise I would have fetched `http://jdbc.postgresql.org/download/postgresql-9.3-1102.jdbc41.jar`
 
@@ -58,14 +57,39 @@ Otherwise I would have fetched `http://jdbc.postgresql.org/download/postgresql-9
 
 ## Set up the DB ##
 
-PostgreSQL was already installed.
+I located the appropriate datbase creation script:
+
+    ddl/reportserver-RS2.1.6-5543-schema-PostgreSQL_CREATE.sql
+
+The database name can be anything.
 
     sudo -u postgres psql
-    \l
+    postgres=# \l
     
-showed no database named reportserver, so I chose that.
+showed no database named "reportserver", so I chose that.
 
+    sudo -u postgres psql
+    postgres=# create user foo encrypted password 'bar';
+    postgres=# create database reportserver with encoding 'UTF8' TEMPLATE template0 owner foo;
+    
+Connect to new db, as user foo.
+Default connection is unix socket, where user name is taken from uniz user.
+Instead we explicitly use an IP socket so password auth is allowed:
 
+    psql --username=foo --password --dbname=reportserver --host localhost
+    postgres=# \i reportserver-RS2.1.6-5543-schema-PostgreSQL_CREATE.sql
+
+Tables and sequences were all owned by 'foo'.
+
+## Connect reportserver to the DB ##
+
+edit `webapps/reportserver/WEB-INF/classes/META-INF/persistence.xml` like this:
+
+<property name="hibernate.connection.url" value="jdbc:postgresql://localhost/reportserver" />
+<property name="hibernate.connection.driver_class" value="org.postgresql.Driver" />
+<property name="hibernate.connection.username" value="foo" />
+<property name="hibernate.connection.password" value="bar" />
+<property name="hibernate.dialect" value="org.hibernate.dialect.PostgreSQLDialect" />
 
 
 
