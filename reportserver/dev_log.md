@@ -91,5 +91,5 @@ edit `webapps/reportserver/WEB-INF/classes/META-INF/persistence.xml` like this:
     <property name="hibernate.connection.password" value="bar" />
     <property name="hibernate.dialect" value="org.hibernate.dialect.PostgreSQLDialect" />
 
-
+After starting tomcat7, reportserver works and you can log in as root.
 
