@@ -1,3 +1,5 @@
+### Dataset
+
 Start with creating a new dataset from the Ghana FLOW survey data:
 
 ![Screenshot][20]
@@ -29,13 +31,15 @@ Double check by previewing the data:
 
 ![Screenshot][50]
 
-A comment about the metric column. In the crosstab we want to display the amount, i.e. the total count of some property. This is accomplished by counting the number of unique rows present of the chosen type. For this we need a field tha we know is different for every record in the dataset and the survey identifier fits that bill perfectly.
+A comment about the metric column. In the crosstab we want to display the amount, i.e. the total count of some property. This is accomplished by counting the number of unique rows present of the chosen type. For this we need a field that we know is different for every record in the dataset. The survey identifier fits that bill perfectly.
 
 The resulting dataset in the outline: 
 
 ![Screenshot][60]
 
-Now we create a data cube. Right click on the Data Cubes item in the outline and select New Data Cube. There's not much to do in the first tab, Data set, we'll get back to it later. There is only one dataset and it's chosen automatically. The name of the cube could be changed, but I haven't.
+### Data cube
+
+Now we create a data cube. Right click on the Data Cubes item in the outline and select New Data Cube. There's not much to do in the first tab, Data set, we'll get back to it later. There is only one dataset, Ghana survey, and it's chosen automatically. The name of the cube could be changed, but I haven't.
 
 ![Screenshot][70]
 
@@ -81,7 +85,9 @@ As seen in the outline:
 
 ![Screenshot][170]
 
-We now need a pair of report parameters. In the outline, right click on the Report parameters item below the Data Cubes. Select New Parameter. You'll be rewarded with this dialog:
+### Parameters
+
+We now need a pair of report parameters. This will allow the user to customize the report by selecting 1) the district for which the data is shown, and 2) the field in the survey which is measured.  In the outline, right click on the Report Parameters item below the Data Cubes. Select New Parameter. You'll be rewarded with this dialog:
 
 ![Screenshot][180]
 
@@ -96,16 +102,18 @@ A secondary dialog pops up and we enter a Display text, "Water source type" and 
 Clicking OK in the New Selection Choice dialog saves it to the Values list in the Selection list values part of the New Parameter dialog. Repeat this for the other survey fields, using this data
 
 ```
-Pump type, typehp
-Construction year, yearconst
-Donor organisation, impldonor
-Implementing organisation, implproject
-Is it working?, functional
+Display text: Pump type Value: typehp
+Display text: Construction year Value: yearconst
+Display text: Donor organisation Value: impldonor
+Display text: Implementing organisation Value: implproject
+Display text: Is it working? Value: functional
 ```
 
 to end up with the following:
 
 ![Screenshot][200]
+
+Note: The District parameter needs to be created differently when using ReportServer. See [below]().
 
 Now we create a second parameter. In the New parameter dialog, Name it District, Prompt "Please enter district", keep Data type as String choose List box for Display type. However this list box is dynamic and will display all the districts in the Ghana dataset. To accomplish this, in the Selection list valuse section, set the Dynamic radio button. This automatically chooses the Ghana dataset since it's the only game in town. Choose column1 (which is mapped to the districtid column in the ghana table) for both Select value column and Select display text. At the bottom of the dialog, in the Sort section set column1 to Sort by, Ascending:
 
@@ -114,6 +122,8 @@ Now we create a second parameter. In the New parameter dialog, Name it District,
 If all is well we should now see two Report parameters in the outline:
 
 ![Screenshot][215]
+
+### Testing the parameters
 
 Let's test that the two parameter we've created actually work. To do this, drag the paramters from the outline onto the blank report:
 
@@ -133,6 +143,8 @@ Choose Pump type for now and a district and we should see something like this:
 ![Screenshot][250]
 
 typehp is the column name for pump types and the selected district should be shown.
+
+### Crosstab
 
 Time to create the crosstab! 
 
@@ -159,6 +171,8 @@ Drag row1 to the area in the crosstab that says "Drop data field(s) to define ro
 Drag metric to the area on the crosstab that says "Drop data field(s) to be summarized here":
 
 ![Screenshot][310]
+
+### Filtering on district
 
 We now have all the basic fields in place for the crosstab. At this point you can test running the report, but the result, if it "works" is going to be quite messy because we do not yet filter the report data on a district. Time to fix that. Double click on the data cube in the outline, or right click on it and select Edit. In the Data Cube Builder dialog click the Filter... button:
 
@@ -192,7 +206,7 @@ Results in Filter dialog:
 
 ![Screenshot][390]
 
-Now we can try running the report and see results for one district. As above, choose View Report from the Run menu. Select Pump type for the survey field to display (explanation below) and a district:
+Now we can try running the report and see results for one district. As above, choose View Report from the Run menu. Select Pump type for the survey field to display (explanation in next section) and a district:
 
 ![Screenshot][400]
 
@@ -200,7 +214,9 @@ If all goes well the result should look loke this:
 
 ![Screenshot][410]
 
-There is a large problem remaining. Regardless of the survey field chosen as report parameter, the pump types is shown. This is because the [original SQL query](#SQL) sets row1 to represent typehp. But we want row1 to be set dynamically depending on the choice made when running the report. To do this we create a small script that is run just before running the database query. 
+### Choose survey field
+
+There is a large problem remaining. Regardless of the survey field chosen as report parameter, the pump types is shown. This is because the [original SQL query](#SQL) sets row1 to represent typehp. But we want row1 to be set dynamically depending on the choice made when running the report. To do this we create a small script that is run just before calling the database. 
 
 In the Outline, select the Ghana survey data set. Select the Script tab below the report view. At the top there is a list box labelled Script, select the beforeOpen event. In the text box below enter the following snippet:
 ```
@@ -219,7 +235,9 @@ We can now run the report and choose both the field from the survey and the dist
 
 ![Screenshot][460]
 
-I won't go into much detail about formatting, but we'll make the table look at least marginally better. Delete the static text metric in the left hand column:
+### Labelling
+
+I won't go into much detail about formatting, but we'll make the table look at least marginally better by adding proper labels to the table header. Delete the static text metric in the left hand column:
 
 ![Screenshot][470]
 
@@ -233,11 +251,13 @@ Replace the top column2 with Council in the left hand column:
 	
 ![Screenshot][500]
 
+### Survey field dynamic label
+
 We want the label for the chosen survey field to be shown in the table header. Delete the lower static text field in the left hand column named column2:
 
 ![Screenshot][510]
 
-From the palette drag a Dynamic Text widget to theempty spot where the column2 label used to be:
+From the palette drag a Dynamic Text widget to the empty spot where the column2 label used to be:
 
 ![Screenshot][515]
 
@@ -254,11 +274,15 @@ Test by running a report:
 ![Screenshot][530]
 ![Screenshot][540]
 
+### Alternative header layout
+
 An alternative to deleting the ```metric``` static text and replacing ```column2``` with Council is to hide on row of the header. Select the Crosstab widget. In the General section of the Properties there's a Hide Measure Header checkbox:
 
 ![Screenshot][550]
 
 This will hide the Council label too however.
+
+### Metric totals
 
 Finally we add cells showing the summation of a row or a column. Click on the icon to the far left in the [column1] cell. select Totals from the popup:
 
