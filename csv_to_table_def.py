@@ -33,23 +33,28 @@ def infer_datatype(data, column):
         """
         try:
             _ = int(s)
-            return "integer"
+            return "integer", 0
         except ValueError:
             pass
         try:
             _ = float(s)
-            return "float"
+            return "float", 0
         except ValueError:
             pass
-        return "varchar({})".format(VARCHAR_LEN)
+        return "varchar", len(s)
 
     # determine the type of data in each column
-    types = [_type(cell) for cell in data[str(column)] if cell is not u'']
-    # if all types are identical then we use that type
-    if len(set(types)) == 1:
-        return types[0]
+    types, lengths = zip(*[_type(cell) for cell in data[str(column)] if cell is not u''])
+    # if all types are identical for all rows then we use that type
+    types = list(set(types))
+    if len(types) == 1:
+        if types[0] is not 'varchar':
+            return types[0]
+    # mix of ints and floats
+    if 'varchar' not in types:
+        return 'float'
     # otherwise we use varchar
-    return "varchar({})".format(VARCHAR_LEN)
+    return "varchar({})".format(max(lengths))
 
 def generate_sql(file_name, table_name):
     """
@@ -63,7 +68,7 @@ def generate_sql(file_name, table_name):
         data.csv = f.read()
     field_types = [infer_datatype(data, column) for column in data.headers]
     rows = [
-        "{} {}".format(colname, field_type) for field_type, colname in zip(
+        "{} {}".format(colname.replace(' ', '_'), field_type) for field_type, colname in zip(
             field_types, data.headers
         )
     ]
