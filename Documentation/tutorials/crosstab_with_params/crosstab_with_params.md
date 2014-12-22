@@ -1,6 +1,8 @@
 ### Dataset
 
-Start with creating a new dataset from the Ghana FLOW survey data:
+Note: this tutorial uses data from the Ghana survey, which currently can be found on the report server. That database is set up as a Data source called FLOW; how that's done is not described here though. 
+
+Start with creating a new dataset from the Ghana FLOW survey data. Right click Data Sets in the outline and select New Data Set. In the New Data Set popup window the FLOW data source should be selected already and the Data Set Type should be SQL Select Query. Set the Data Set Name to Ghana survey:
 
 ![Screenshot][20]
 
@@ -8,7 +10,7 @@ We use the following SQL
 
 ```
 select 
-	identifier as metric, 
+	identifier1 as metric, 
 	districtid as column1, 
 	councilname as column2, 
 	typehp as row1
@@ -31,7 +33,7 @@ Double check by previewing the data:
 
 ![Screenshot][50]
 
-A comment about the metric column. In the crosstab we want to display the amount, i.e. the total count of some property. This is accomplished by counting the number of unique rows present of the chosen type. For this we need a field that we know is different for every record in the dataset. The survey identifier fits that bill perfectly.
+A comment about the metric column. In the crosstab we want to display the amount, i.e. the total count, of some property. This is accomplished by counting the number of unique rows present of the chosen type. For this we need a field that we know is different for every record in the dataset. The survey identifier fits that bill perfectly.
 
 The resulting dataset in the outline: 
 
@@ -47,7 +49,7 @@ Switch to the second tab, Groups and Summaries:
 
 ![Screenshot][80]
 
-Here is where we create the cube. This is done by drag-dropping the Ghana survey fields to the Groups and Summary fields in the cube.
+Here is where we create the cube. This is done by drag-dropping the Ghana survey fields to the Groups and Summary area in the cube.
 
 Start by dragging column1 and drop it below the Groups folder:
 
@@ -73,7 +75,7 @@ Call it Survey field:
 
 ![Screenshot][140]
 
-Finally add metric by dragging it to Summary fields:
+Finally add metric by dragging it to Summary Fields (Measures):
 
 ![Screenshot][150]
 
@@ -87,7 +89,11 @@ As seen in the outline:
 
 ### Parameters
 
-We now need a pair of report parameters. This will allow the user to customize the report by selecting 1) the district for which the data is shown, and 2) the field in the survey which is measured.  In the outline, right click on the Report Parameters item below the Data Cubes. Select New Parameter. You'll be rewarded with this dialog:
+We now need a pair of report parameters. This will allow the user to customize the report by selecting 1) the field in the survey which is measured, and 2) the district for which the data is shown.
+
+#### Survey field parameter
+
+In the outline, right click on the Report Parameters item below the Data Cubes. Select New Parameter. You'll be rewarded with this dialog:
 
 ![Screenshot][180]
 
@@ -97,7 +103,7 @@ Now we need to enter the choices for the list box. In the Selection list values 
 
 ![Screenshot][190]
 
-A secondary dialog pops up and we enter a Display text, "Water source type" and a value, "typesource". typesource is one of the column names in the ghana database table that we want to be able to choose as the data to show in the crosstab. The display text is what is shown in the list box for choosing survey field to display.
+A secondary dialog pops up and we enter a Display text, "Water source type" and a value, "typesource". typesource is one of the column names in the ghana database table that we want to be able to choose as the data to show in the crosstab. The display text is what is shown in the list box when choosing survey field to display.
 
 Clicking OK in the New Selection Choice dialog saves it to the Values list in the Selection list values part of the New Parameter dialog. Repeat this for the other survey fields, using this data
 
@@ -113,9 +119,11 @@ to end up with the following:
 
 ![Screenshot][200]
 
+#### District parameter
+
 Note: The District parameter needs to be created differently when using ReportServer. See [below]().
 
-Now we create a second parameter. In the New parameter dialog, Name it District, Prompt "Please enter district", keep Data type as String choose List box for Display type. However this list box is dynamic and will display all the districts in the Ghana dataset. To accomplish this, in the Selection list valuse section, set the Dynamic radio button. This automatically chooses the Ghana dataset since it's the only game in town. Choose column1 (which is mapped to the districtid column in the ghana table) for both Select value column and Select display text. At the bottom of the dialog, in the Sort section set column1 to Sort by, Ascending:
+Now we create a second parameter. In the New parameter dialog, Name it District, Prompt "Please select the district", keep Data type as String choose List box for Display type. However this list box is dynamic and will display all the districts in the Ghana dataset. To accomplish this, in the Selection list valuse section, set the Dynamic radio button. This automatically chooses the Ghana dataset since it's the only game in town. Choose column1 (which is mapped to the districtid column in the ghana table) for both Select value column and Select display text. At the bottom of the dialog, in the Sort section set column1 to Sort by, Ascending.:
 
 ![Screenshot][210]
 
@@ -194,7 +202,7 @@ And in the third list box click on Build expression:
 
 ![Screenshot][360]
 
-We are greeted with a fourth(!) level of dialog box, the Expression builder (JavaScript). In the Category box, lower left, click Report Parameters. In Sub-Category, select ---All---. In Double Click to instert, double click on District to get it inserted in the top expressions box:
+We are greeted with a fourth(!) level of dialog box, the Expression Builder (JavaScript). In the Category box, lower left, click Report Parameters. In Sub-Category, select ---All---. In Double Click to instert, double click on District to get it inserted in the top expressions box:
 
 ![Screenshot][370]
 
@@ -229,15 +237,17 @@ this.queryText = this.queryText.replace("typehp", params["Survey field"].value);
 With this little hack we're replacing "typehp" with the column name chosen using the Survey field report parameter in the SQL query we use to retrieve the data. (I messed around a long time with proper SQL placeholders trying to use them to set the selected field in the 
 SQL, but apparently they can only be used in the WHERE part of a query.)
 
+Now we can make arbitrary selections for both parameters:
+
 ![Screenshot][450]
 
-We can now run the report and choose both the field from the survey and the district from the survey:
+And see the resulting crosstab report:
 
 ![Screenshot][460]
 
 ### Labelling
 
-I won't go into much detail about formatting, but we'll make the table look at least marginally better by adding proper labels to the table header. Delete the static text metric in the left hand column:
+I won't go into much detail about formatting, but we'll make the report look at least marginally better by adding proper labels to the table header. Delete the static text metric in the left hand column:
 
 ![Screenshot][470]
 
@@ -265,7 +275,7 @@ In the expression builder that pops up when you drop the dynamic text widget ent
 ```
 params["Survey field"].displayText
 ```
-(This can't be accomplished using the boxes at the bottom of the dialog. You can only get to ```params["District"].value```):
+(This can't be accomplished using the boxes at the bottom of the dialog. You can only get to ```params["Survey field"].value```):
 
 ![Screenshot][520]
 
@@ -276,7 +286,7 @@ Test by running a report:
 
 ### Alternative header layout
 
-An alternative to deleting the ```metric``` static text and replacing ```column2``` with Council is to hide on row of the header. Select the Crosstab widget. In the General section of the Properties there's a Hide Measure Header checkbox:
+An alternative to deleting the ```metric``` static text and replacing ```column2``` with Council is to hide one row of the header. Select the Crosstab widget. In the General section of the Properties there's a Hide Measure Header checkbox:
 
 ![Screenshot][550]
 
@@ -284,7 +294,7 @@ This will hide the Council label too however.
 
 ### Metric totals
 
-Finally we add cells showing the summation of a row or a column. Click on the icon to the far left in the [column1] cell. select Totals from the popup:
+Finally we add cells showing the summation of a row or a column. Click on the icon to the far left in the [column1] cell. Select Totals from the popup:
 
 ![Screenshot][560]
 
@@ -307,7 +317,7 @@ Run a report:
 
 ## Deploying the report to ReportServer
 
-To provide web access to the running of the report we will use ReportServer. Here I will only make a quick walkthrough of setting up the report with emphasis on the somewhat tricky config of the report parameters. There is a lot of documentation about ReportServer for more in-depth knowledge.
+To provide web access to the running of the report we will use ReportServer. Here I will only make a quick walkthrough of setting up the report on ReportServer with emphasis on the somewhat tricky config of the report parameters. There is a lot of documentation about ReportServer for more in-depth knowledge.
 
 ### Setup
 
@@ -315,7 +325,7 @@ In the Reportmanager, create a new folder. Right click on the Report Root (or a 
 
 ![Screenshot][620]
 
-Edit the folder name and description and save using Apply:
+Edit a folder name and description and save using Apply:
 
 ![Screenshot][630]
 
@@ -357,7 +367,7 @@ Enter "Survey field" in the Name field. This is the parameter label shown when c
 
 ![Screenshot][720]
 
-Click on the Specific Properties menu item to the left. Click on the magnifying glass to the left in the Datasource field. Find and select the BIRT internal datasource by double clicking it in the left hand column to move it to the right. Save using Apply.
+Click on the Specific Properties menu item to the left. Click on the magnifying glass to the left in the Datasource field. Find and select the BIRT datasource by double clicking it in the left hand column to move it to the right. Save using Apply.
 
 ![Screenshot][730]
 
@@ -367,9 +377,9 @@ In the lower part of the view we only need to set the Selecten(!) mode to Single
 
 ![Screenshot][740]
 
-For the second parameter, District, we need to do some custom work to get things working with ReportServer. Previously the parameter could use data from our Ghana survey dataset, specifying the column to use and using only unique values. With ReportServer this doesn't  quite work, I'm not sure if this is a bug in ReportServeror not. Anyway there's a workaround.
+For the second parameter, District, there's a littel more work needed to get things working with ReportServer. When we created the parameter in the Eclipse BIRT report designer, we could use data from our Ghana survey dataset, specifying the column to use filter to get only unique values. With ReportServer this doesn't  quite work, I'm not sure if this is a bug in ReportServeror not. Anyway there's a workaround.
 
-To get the District parameter working we need to create a dataset that provides exactly what's needed for the dropdown. So we go back to the Eclipse BIRT report designer. Start by creating a new dataset, name it District and set the query to
+To get the District parameter working we need to create a dataset that provides exactly what's needed for the dropdown. So we go back to the BIRT designer. Start by creating a new dataset, name it District and set the query to
 
 ```sql
 select distinct districtid
