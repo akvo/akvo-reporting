@@ -426,6 +426,7 @@ And be able to view the dataset in many ways
 
 ![Screenshot][800]
 
+Note: in the image above the column choice, Construction type, is missing from the table header. This seems to be a bug in ReportServer, the [dynamic label we created](survey-field-dynamic-label) in BIRT designer isn't showing up when running the report in Reporterver. 
 
 [10]: img/10.jpg
 [20]: img/20.jpg
