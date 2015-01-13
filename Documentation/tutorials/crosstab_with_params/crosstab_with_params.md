@@ -10,8 +10,9 @@ Start with creating a new dataset from the Ghana FLOW survey data. Right click D
 
 ![Screenshot][20]
 
+#### SQL
+
 Clicking Next we use the following SQL
-[](#sql)
 
 ```sql
 select 
@@ -141,7 +142,7 @@ Of course this list can be changed/extended using other fields in the survey. Th
 
 #### District parameter
 
-Note: The District parameter needs to be created differently when using ReportServer. See [below]().
+Note: The District parameter needs to be created differently when using ReportServer. See [below](#district-parameter-using-a-dataset).
 
 Now we create a second parameter, choice of District. In the New parameter dialog, Name it District, Prompt text "Please select the district", keep Data type as String choose List box for Display type. 
 
@@ -240,7 +241,7 @@ Results in Filter dialog:
 
 ![Screenshot][390]
 
-Now we can try running the report and see results for one district. As [above](), choose View Report from the Run menu. Select Pump type for the survey field to display (explanation in next section) and a district:
+Now we can try running the report and see results for one district. As [above](#testing-the-parameters), choose View Report from the Run menu. Select Pump type for the survey field to display (explanation in next section) and a district:
 
 ![Screenshot][400]
 
@@ -362,7 +363,7 @@ Find the template on your local file system and upload it. Save the new report u
 
 ### Report parameters
 
-At the bottom of the screen click the Parameters tab:
+The BIRT parameters we use to get user input need some extra steps to function when the report is deployed to ReportServer. At the bottom of the screen click the Parameters tab:
 
 ![Screenshot][690]
 
@@ -388,6 +389,8 @@ In the lower part of the view we only need to set the Selecten(!) mode to Single
 
 ![Screenshot][740]
 
+#### District parameter using a dataset
+
 For the second parameter, District, there's a little more work needed to get things working with ReportServer. When we created the parameter in the Eclipse BIRT report designer, we could use data from our Ghana survey dataset, specifying the column to use filter to get only unique values. With ReportServer this doesn't  quite work, I'm not sure if this is a bug in ReportServeror not. Anyway there's a workaround.
 
 To get the District parameter working we need to create a dataset that provides exactly what's needed for the dropdown. So we go back to the BIRT designer. Start by creating a new dataset, name it District and set the query to
@@ -405,7 +408,7 @@ Check that we get the expected list using the preview tab:
 
 ![Screenshot][760]
 
-Now save the report and [upload it]() to the ReportServer again, replacing the existing Flow tutorial report design. We can now create the District parameter.
+Now save the report and [upload it](#setup) to the ReportServer again, replacing the existing Flow tutorial report design. We can now create the District parameter.
 
 Go back to the Parameters tab in the report and create a new Datasource parameter, set the Name and Key to District:
 
