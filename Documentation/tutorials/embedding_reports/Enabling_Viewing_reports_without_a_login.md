@@ -1,4 +1,4 @@
-# **Viewing reports on ReportServer without a login**
+# **Enabling viewing of reports on ReportServer without a login**
 
 To allow users to view report results without a login to the ReportServer you need to make use of 'httpauthexport'.
 The details for the connection are setup in the ReportServer file 'httpauthexecute.cf'.
