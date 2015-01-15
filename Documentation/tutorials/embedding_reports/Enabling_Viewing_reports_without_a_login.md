@@ -18,7 +18,7 @@ http://SERVER:PORT/reportserverbasedir/reportserver/httpauthexport
 
 An example of how the URL would look for Akvo:
 
-https://reporting.akvo.org/reportserver/reportserver/httpauthexport?id=39461&format=html&user=test&password=test1
+https://reporting.akvo.org/reportserver/reportserver/httpauthexport?id=3931&format=html&user=test&password=test1
 
 
 ## Where do I find the 'Report ID'?
@@ -52,7 +52,7 @@ The 'User ID' can be found in the ReportServer under 'User management/User Root/
      <username>test</username>
      <password>test1</password>
       <registered>
-        <ids>39461</ids>
+        <ids>3931</ids>
         <ids>5593</ids>
         <ids>7089</ids>
         <ids>7244</ids>
