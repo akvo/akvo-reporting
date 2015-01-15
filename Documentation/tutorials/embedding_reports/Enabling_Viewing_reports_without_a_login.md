@@ -27,17 +27,20 @@ The 'Report ID' can be found in the ReportServer under 'Reportmanager/Report Roo
 
 ![Report ID location](https://raw.githubusercontent.com/akvo/akvo-reporting/master/Documentation/tutorials/embedding_reports/img/10.png?raw=true "Report ID location")
 
+
 ## Where do I find the 'Key'?
 
 The 'Report key' can be found in the ReportServer under 'Reportmanager/Report Root/*ReportDirectory/ReportName/*', select the report name.  The name displayed to the right under the field 'key' is the 'Report key'.
 
 ![User ID location](https://raw.githubusercontent.com/akvo/akvo-reporting/master/Documentation/tutorials/embedding_reports/img/25.png?raw=true "User ID location")
 
+
 ##  Where do I find the 'User ID'?
 
 The 'User ID' can be found in the ReportServer under 'User management/User Root/*Group/*', select the user name.  The number displayed in brackets next to 'Edit user' is the 'User ID'.
 
 ![User ID location](https://raw.githubusercontent.com/akvo/akvo-reporting/master/Documentation/tutorials/embedding_reports/img/20.png?raw=true "User ID location")
+
 
 ##  Example of the httpauthexecute.cf entry 
 
@@ -62,7 +65,9 @@ The 'User ID' can be found in the ReportServer under 'User management/User Root/
   </servlet>
 </configuration>
 ```
+
 ![Httpauthexecute.cf](https://raw.githubusercontent.com/akvo/akvo-reporting/master/Documentation/tutorials/embedding_reports/img/30.png?raw=true "Httpauthexecute.cf")
+
 
 ##  Additional information
 
