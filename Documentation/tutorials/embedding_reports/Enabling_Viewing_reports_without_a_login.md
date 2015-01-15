@@ -6,6 +6,7 @@ The details for the connection are setup in the ReportServer file 'httpauthexecu
 ## Before you begin you will need to have the following:
 
 - All report ids for reports required to be executed
+- Report keys if used instead of report ids
 - The userid of the ReportUser account which will execute the report
 - A dummy username/password for allowing the report to execute via a url
 - Access to configure the httpauthexecute.cf file
@@ -31,7 +32,11 @@ The 'Report ID' can be found in the ReportServer under 'Reportmanager/Report Roo
 
 The 'User ID' can be found in the ReportServer under 'User management/User Root/*Group/*', select the user name.  The number displayed in brackets next to 'Edit user' is the 'User ID'.
 
-![User ID location](https://raw.githubusercontent.com/akvo/akvo-reporting/master/Documentation/tutorials/embedding_reports/img/20.png?raw=true "User ID location")
+## Where do I find the 'Key'?
+
+The 'Report ID' can be found in the ReportServer under 'Reportmanager/Report Root/*ReportDirectory/ReportName/*', select the report name.  The name displayed to the right under the field 'key' is the 'Report key'.
+
+![User ID location](https://raw.githubusercontent.com/akvo/akvo-reporting/master/Documentation/tutorials/embedding_reports/img/25.png?raw=true "User ID location")
 
 ##  Example of the httpauthexecute.cf entry 
 
