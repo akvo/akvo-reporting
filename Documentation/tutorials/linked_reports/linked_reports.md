@@ -1,6 +1,6 @@
 ## Linked reports tutorial
 
-This document describes how to create a pair of reports where one links to the other, creating a "drill down". The creation of the data source, data cube and crosstab is walked through more quickly. For in-depth description of those steps check out the [crosstab tutorial]().
+This document describes how to create a pair of reports where one links to the other, creating a "drill down". The creation of the data source, data cube and crosstab is walked through more quickly. For in-depth description of those steps check out the [crosstab tutorial](../crosstab_with_params/crosstab_with_params.md).
 
 ### Ghana pump status reports
 
