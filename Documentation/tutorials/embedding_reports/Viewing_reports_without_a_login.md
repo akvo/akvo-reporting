@@ -24,7 +24,7 @@ https://reporting.akvo.org/reportserver/reportserver/httpauthexport?id=39461&for
 
 The 'Report ID' can be found in the ReportServer under 'Report Manager/Report Root/*ReportDirectory/ReportName*'
 
-![Report ID location](akvo-reporting/Documentation/tutorials/embedding_reports/img/10.png "Report ID location")
+![Report ID location](https://akvo/akvo-reporting/Documentation/tutorials/embedding_reports/img/10.png "Report ID location")
 
 
 
