@@ -27,6 +27,11 @@ The 'Report ID' can be found in the ReportServer under 'Reportmanager/Report Roo
 
 ![Report ID location](https://raw.githubusercontent.com/akvo/akvo-reporting/master/Documentation/tutorials/embedding_reports/img/10.png?raw=true "Report ID location")
 
+## Where do I find the 'Key'?
+
+The 'Report key' can be found in the ReportServer under 'Reportmanager/Report Root/*ReportDirectory/ReportName/*', select the report name.  The name displayed to the right under the field 'key' is the 'Report key'.
+
+![User ID location](https://raw.githubusercontent.com/akvo/akvo-reporting/master/Documentation/tutorials/embedding_reports/img/25.png?raw=true "User ID location")
 
 ##  Where do I find the 'User ID'?
 
@@ -34,7 +39,7 @@ The 'User ID' can be found in the ReportServer under 'User management/User Root/
 
 ## Where do I find the 'Key'?
 
-The 'Report ID' can be found in the ReportServer under 'Reportmanager/Report Root/*ReportDirectory/ReportName/*', select the report name.  The name displayed to the right under the field 'key' is the 'Report key'.
+The 'Report key' can be found in the ReportServer under 'Reportmanager/Report Root/*ReportDirectory/ReportName/*', select the report name.  The name displayed to the right under the field 'key' is the 'Report key'.
 
 ![User ID location](https://raw.githubusercontent.com/akvo/akvo-reporting/master/Documentation/tutorials/embedding_reports/img/25.png?raw=true "User ID location")
 
