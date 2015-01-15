@@ -130,6 +130,17 @@ In the HTML report clicking on the Northern region you will be shown the distric
 
 ![Screenshot][290]
 
+### Analysis of the URL
+
+The URL constructed to link the reports contains three elements:
+
+  * the server location: ```'reportexport```
+  * the report identity: ```?key=district_pump_status```
+  * the parameter choice: ```&p_Region=' + escape(data["Region"])```
+
+reportexport is one of the ReportServer locations for access to reports via URL. The key query parameter identifies a report via the Key field we entered [above](#deploying-to-reportserver). Finally the p_Region parameter identifies the BIRT parameter Region and links it to how parameters are used in ReportServer by prepending "p_" to the parameter name.
+
+
 
 [100]: img/100.png
 [110]: img/110.png
