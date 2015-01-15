@@ -49,6 +49,9 @@ The 'Report ID' can be found in the ReportServer under 'Reportmanager/Report Roo
      <password>test1</password>
       <registered>
         <ids>39461</ids>
+        <ids>5593</ids>
+        <ids>7089</ids>
+        <ids>7244</ids>
          <keys/>
       </registered>
       <executeuser>
