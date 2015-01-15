@@ -35,7 +35,7 @@ The 'User ID' can be found in the ReportServer under 'User management/User Root/
 
 ##  Example of the httpauthexecute.cf entry 
 
-<?xml version="1.0" encoding="UTF-8"?>
+'''<?xml version="1.0" encoding="UTF-8"?>
 <configuration>
   <servlet>
    <httpauthexecute>
@@ -51,6 +51,7 @@ The 'User ID' can be found in the ReportServer under 'User management/User Root/
    </httpauthexecute>
   </servlet>
 </configuration>
+'''
 
 
 
