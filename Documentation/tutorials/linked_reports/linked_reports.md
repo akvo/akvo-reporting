@@ -100,11 +100,13 @@ Returning to the parent report we select the Region element of the crosstab and 
 
 ![Screenshot][230]
 
-Click the Edit... button and enter:
+Click the Edit... button. In the Hyperlin Options popup select URI Hypelink Type, and click the lecftmost button. Select JavaScript Syntax:
 
-```
-'reportexport?key=district_pump_status&p_Region=' + escape(data["Region"])
-```
+![Screenshot][234]
+
+This will open the Expression Builder (JavaScript) popup. Enter ```'reportexport?key=district_pump_status&p_Region=' + escape(data["Region"])``` in the expression field:
+
+![Screenshot][237]
 
 ### Deploying to ReportServer
 
@@ -134,7 +136,7 @@ In the HTML report clicking on the Northern region you will be shown the distric
 
 The URL constructed to link the reports contains three elements:
 
-  * the server location: ```'reportexport```
+  * the location on ReportServer: ```'reportexport```
   * the report identity: ```?key=district_pump_status```
   * the parameter choice: ```&p_Region=' + escape(data["Region"])```
 
@@ -156,6 +158,8 @@ reportexport is one of the ReportServer locations for access to reports via URL.
 [210]: img/210.png
 [220]: img/220.png
 [230]: img/230.png
+[234]: img/234.png
+[237]: img/237.png
 [240]: img/240.png
 [250]: img/250.png
 [260]: img/260.png
