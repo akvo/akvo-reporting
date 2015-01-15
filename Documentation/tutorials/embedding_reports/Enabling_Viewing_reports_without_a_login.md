@@ -57,4 +57,4 @@ The 'User ID' can be found in the ReportServer under 'User management/User Root/
 
 ##  Additional information
 
-Additional information can be found on page 76, 'Embedding reports without a login', of the <p>ReportServer Administrator Guide="https://www.dropbox.com/s/cyrrv8jpc1vctr0/Report_server_Administrator_Guide.pdf?dl=0"</a>.</p>
+Additional information can be found on page 76, 'Embedding reports without a login', of the [ReportServer Administrator Guide](https://www.dropbox.com/s/cyrrv8jpc1vctr0/Report_server_Administrator_Guide.pdf?dl=0)
