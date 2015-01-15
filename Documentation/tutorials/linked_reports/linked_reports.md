@@ -4,11 +4,11 @@ This document describes how to create a pair of reports where one links to the o
 
 ### Ghana pump status reports
 
-We will create two reports that display the same data, but with different granularity. The reports show how many pumps are working and how many are broken in Ghana. The difference between the reports is that the "parent" shows this on the region level. There are three regions in ghana. The "child" report shows the status of the pumps for all districts in one region.
+We will create two reports that display the same data, but with different granularity. The reports show how many pumps are working and how many are broken in Ghana. The difference between the reports is that the "parent" shows this on the region level. There are three regions in Ghana. The "child" report shows the status of the pumps for all districts in one region.
 
 ### Create the region level report (the parent)
 
-The report uses the same data souce, FLOW, as the crosstab tutorial report. We create a dataset, Regions, using this SQL:
+The report uses the same data source, FLOW, as the crosstab tutorial report. We create a dataset, Regions, using this SQL:
 
 ```
 select 
@@ -31,7 +31,7 @@ Check that the report looks ok:
 
 ![Screenshot][130]
 
-### Create the district level reort (the child)
+### Create the district level report (the child)
 
 Very similar, we use the same data source and just change the query a little:
 
@@ -94,13 +94,13 @@ Now the report tells you what you're seeing:
 
 ### Linking the reports
 
-To link the reports we want to be able to select one of the districts in the parent and be shown the child report for that district. This is done by adding hyperlinks to the region names in the parent report. Unfortunately the links creted out of the box in the Eclipse BIRT designer won't work when deploying to ReportServer so we have to create the link in the designer and then deploy without being able to test first.
+To link the reports we want to be able to select one of the districts in the parent and be shown the child report for that district. This is done by adding hyperlinks to the region names in the parent report. Unfortunately the links created out of the box in the Eclipse BIRT designer won't work when deploying to ReportServer so we have to create the link in the designer and then deploy without being able to test first.
 
 Returning to the parent report we select the Region element of the crosstab and then open the Hyperlink tab in the properties below:
 
 ![Screenshot][230]
 
-Click the Edit... button. In the Hyperlin Options popup select URI Hypelink Type, and click the lecftmost button. Select JavaScript Syntax:
+Click the Edit... button. In the Hyperlink Options popup select URI Hyperlink Type, and click the leftmost button. Select JavaScript Syntax:
 
 ![Screenshot][234]
 
