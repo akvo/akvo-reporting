@@ -22,9 +22,35 @@ https://reporting.akvo.org/reportserver/reportserver/httpauthexport?id=39461&for
 
 ## Where do I find the 'Report ID'?
 
-The 'Report ID' can be found in the ReportServer under 'Report Manager/Report Root/*ReportDirectory/ReportName*'
+The 'Report ID' can be found in the ReportServer under 'Reportmanager/Report Root/*ReportDirectory/ReportName/*', select the report name.  The number displayed in brackets next to 'edit Eclipse Birt report' is the 'Report ID'.
 
 ![Report ID location](https://raw.githubusercontent.com/akvo/akvo-reporting/master/Documentation/tutorials/embedding_reports/img/10.png?raw=true "Report ID location")
+
+
+##  Where do I find the 'User ID'?
+
+The 'User ID' can be found in the ReportServer under 'User management/User Root/*Group/*', select the user name.  The number displayed in brackets next to 'Edit user' is the 'User ID'.
+
+![User ID location](https://raw.githubusercontent.com/akvo/akvo-reporting/master/Documentation/tutorials/embedding_reports/img/20.png?raw=true "User ID location")
+
+##  Example of the httpauthexecute.cf entry 
+
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration>
+  <servlet>
+   <httpauthexecute>
+     <username>test</username>
+     <password>test1</password>
+      <registered>
+        <ids>39461</ids>
+         <keys/>
+      </registered>
+      <executeuser>
+        <id>133297</id>
+      </executeuser>
+   </httpauthexecute>
+  </servlet>
+</configuration>
 
 
 
