@@ -1,0 +1,88 @@
+# -*- coding: utf-8 -*-
+
+# Akvo Reporting is covered by the GNU Affero General Public License.
+# See more details in the license.txt file located at the root folder of the Akvo RSR module.
+# For additional details on the GNU license please see < http://www.gnu.org/licenses/agpl.html >.
+
+###################################################################################################
+
+# Utility script that outputs the CREATE TABLE SQL needed to host the data of a CSV file,
+# along with the SQL for importing same file. The script infers the column data types in a simple way.
+
+###################################################################################################
+
+
+import os
+import sys
+import tablib
+
+from drakeutil import *
+
+CREATE_TABLE_TEMPLATE = "CREATE TABLE {table_name} ({rows});"
+VARCHAR_LEN = 100
+
+def infer_datatype(data, column):
+    """
+    :param data: the tablib dataset
+    :param column: the column name
+    :return: the Postgres type to use for this column
+    """
+    def _type(s):
+        """
+        determine if we can parse the input string as an integer or a float
+        :param s: string to test
+        :return: Postgres field data type
+        """
+        try:
+            _ = int(s)
+            return "integer", 0
+        except ValueError:
+            pass
+        try:
+            _ = float(s)
+            return "float", 0
+        except ValueError:
+            pass
+        return "varchar", len(s)
+
+    # determine the type of data in each column
+    types, lengths = zip(*[_type(cell) for cell in data[str(column)] if cell is not u''])
+    # if all types are identical for all rows then we use that type
+    types = list(set(types))
+    if len(types) == 1:
+        if types[0] is not 'varchar':
+            return types[0]
+    # mix of ints and floats
+    if 'varchar' not in types:
+        return 'float'
+    # otherwise we use varchar
+    return "varchar({})".format(max(lengths))
+
+def generate_sql(table_name):
+    """
+    Generate the sql for the creation of a table holding the data of the CSV
+    :param file_name: CSV file
+    :param table_name: optional name of DB table, otherwise the CSV file name's used
+    :return: the CREATE TABLE SQL
+    """
+    with open(INPUT, 'r') as f:
+        data = tablib.Dataset()
+        data.csv = f.read()
+    field_types = [infer_datatype(data, column) for column in data.headers]
+    rows = [
+        "{} {}".format(colname.replace(' ', '_'), field_type) for field_type, colname in zip(
+            field_types, data.headers
+        )
+    ]
+    return CREATE_TABLE_TEMPLATE.format(
+        table_name=table_name,
+        rows=",".join(rows),
+    )
+
+if __name__ == '__main__':
+    if len(sys.argv) < 1:
+        print "Usage: python csv_to_table.py table_name"
+    else:
+        table_name = sys.argv[1]
+        print generate_sql(table_name)
+        # print "COPY {} FROM '/path/to/{}' DELIMITER ',' CSV HEADER;".format(table_name, file_name)
