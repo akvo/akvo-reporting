@@ -71,10 +71,7 @@ The 'User ID' can be found in the ReportServer under 'User management/User Root/
    </httpauthexecute>
   </servlet>
 </configuration>
-```
-
-![Httpauthexecute.cf](https://raw.githubusercontent.com/akvo/akvo-reporting/master/Documentation/tutorials/embedding_reports/img/30.png?raw=true "Httpauthexecute.cf")
-
+`
 
 ##  Additional information
 
