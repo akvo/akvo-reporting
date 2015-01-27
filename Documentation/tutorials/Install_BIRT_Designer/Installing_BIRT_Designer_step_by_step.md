@@ -17,7 +17,7 @@ BIRT Designer is part of the BIRT project by Eclipse.  You can find out more inf
 
 BIRT Designer is part of the [BIRT All-in-One](http://download.eclipse.org/birt/downloads/) package.  
 
-To download BIRT All-in-One select 'Download'.
+To download BIRT All-in-One go to (http://download.eclipse.org/birt/downloads/) and select 'Download'.
 
 ![Download BIRT ALL-in-One](https://raw.githubusercontent.com/akvo/akvo-reporting/master/Documentation/tutorials/Install_BIRT_Designer/img/10.png?raw=true "Download BIRT")
 
