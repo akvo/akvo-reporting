@@ -44,12 +44,16 @@ If you chose to unzip upon completion, the directory '*eclipse*' will automatica
 
 If you chose to save the download to a specific location first, you need to locate the download and unzip it.  This will create the '*eclipse*' folder.
 
+![Eclipse folder](https://raw.githubusercontent.com/akvo/akvo-reporting/master/Documentation/tutorials/Install_BIRT_Designer/img/20.png?raw=true)
+
 Depending on your operating system and your archive utility, you may be asked to unzip the folder to a specific location.  You should unzip it to your 'Applications' or 'Programs' folder.
 
 
-## Where do I find the 'Key'?
+## Installing and running BIRT Designer
 
-The 'Report key' can be found in the ReportServer under 'Reportmanager/Report Root/*ReportDirectory/ReportName/*', select the report name.  The name displayed to the right under the field 'key' is the 'Report key'.
+If you were not asked to unzip to a specific location, you will need to add the '*eclipse*' folder to your 'Applications' or 'Programs' folder.
+
+
 
 ![User ID location](https://raw.githubusercontent.com/akvo/akvo-reporting/master/Documentation/tutorials/embedding_reports/img/25.png?raw=true "User ID location")
 
