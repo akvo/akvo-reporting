@@ -147,3 +147,7 @@ cd "\Program Files\eclipse"
 - Run Eclipse with the -clean option:
 eclipse -clean
 - Eclipse will restart. Again check for the BIRT perspective.
+
+## Additional installation information
+
+http://eclipse.org/birt/documentation/install.php
