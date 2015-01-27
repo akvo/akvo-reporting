@@ -69,9 +69,18 @@ Mac users may be presented with the below.  Please select 'Open'.
 ![Open](https://raw.githubusercontent.com/akvo/akvo-reporting/master/Documentation/tutorials/Install_BIRT_Designer/img/50.png?raw=true "Open")
 
 
-BIRT Designer will start up with a 'Workspace Launcher'.  The folder which you set here will be your BIRT working folder.  All of your projects, templates and resources will be stored here so make a note of where it is located.
+BIRT Designer will start up the 'Workspace Launcher'.  The folder which you set here will be your BIRT working folder.  All of your projects, templates and resources will be stored here so make a note of where it is located.
 
 ![Workspace location](https://raw.githubusercontent.com/akvo/akvo-reporting/master/Documentation/tutorials/Install_BIRT_Designer/img/60.png?raw=true "Workspace location")
+
+
+Select 'Use this as default and do not ask again'.
+
+![Select](https://raw.githubusercontent.com/akvo/akvo-reporting/master/Documentation/tutorials/Install_BIRT_Designer/img/70.png?raw=true "Select default")
+
+Select 'Ok'.
+
+![Ok](https://raw.githubusercontent.com/akvo/akvo-reporting/master/Documentation/tutorials/Install_BIRT_Designer/img/80.png?raw=true "Ok")
 
 
 
