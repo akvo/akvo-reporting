@@ -33,7 +33,7 @@ In this guide we will select 'Mac OS X (Cocoa) 64-bit' version.  This installs '
 
 
 
-[Download link](https://raw.githubusercontent.com/akvo/akvo-reporting/master/Documentation/tutorials/Install_BIRT_Designer/img/12.png "Download link")
+[Download link](https://raw.githubusercontent.com/akvo/akvo-reporting/master/Documentation/tutorials/Install_BIRT_Designer/img/12.png?raw=true "Download link")
 
 ## Where do I find the 'Key'?
 
