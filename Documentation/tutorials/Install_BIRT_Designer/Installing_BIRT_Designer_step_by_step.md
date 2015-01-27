@@ -89,11 +89,21 @@ Select 'Workbench', top right, to open BIRT Designer.
 ![Eclipse](https://raw.githubusercontent.com/akvo/akvo-reporting/master/Documentation/tutorials/Install_BIRT_Designer/img/90.png?raw=true "eclipse")
 
 
+##  Setting the Perspective
 
-##  Where do I find the 'User ID'?
+'Perspective' is just Eclipse lingo for 'view'.
 
-The 'User ID' can be found in the ReportServer under 'User management/User Root/*Group/*', select the user name.  The number displayed in brackets next to 'Edit user' is the 'User ID'.
+BIRT Designer starts up in the 'Project Explorer' perspective.
 
+To set it to the 'Report Design' perspective select the grid+ 'open perspective' icon, top right.
+
+![Perspective](https://raw.githubusercontent.com/akvo/akvo-reporting/master/Documentation/tutorials/Install_BIRT_Designer/img/100.png?raw=true "perspective")
+
+
+
+
+
+We need to set the perspective to 
 ![User ID location](https://raw.githubusercontent.com/akvo/akvo-reporting/master/Documentation/tutorials/embedding_reports/img/20.png?raw=true "User ID location")
 
 
