@@ -2,9 +2,11 @@
 
 If you want to create or edit report templates you need to install BIRT Designer.  It is not possible to edit '.rptdesign' templates on the ReportServer itself.
 
-This is something that only Report Managers need to use.  The ReportServer allows for general execution and parameter selection in reports as well as creation of basic list reports by users.
+This is something that only Report Managers are likely to need.  
 
-## Before you begin you will need to have the following:
+The ReportServer allows for general execution and parameter selection in complex crosstab reports, as well as creation of basic list reports by users.
+
+## Before you begin you will need the following:
 
 - internet access
 - permissions to install software to your local machine
