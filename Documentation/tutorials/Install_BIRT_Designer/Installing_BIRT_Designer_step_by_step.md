@@ -82,7 +82,7 @@ Select 'Ok'.
 
 ![Ok](https://raw.githubusercontent.com/akvo/akvo-reporting/master/Documentation/tutorials/Install_BIRT_Designer/img/80.png?raw=true "Ok")
 
-Eclipse will start up.
+The first time you run '*eclipse.app*' or '*eclipse.exe*', Eclipse will start up.  Once you have followed these next steps BIRT Designer will always startup in the 'Report Design' view.
 
 Select 'Workbench', top right, to open BIRT Designer.
 
@@ -100,11 +100,6 @@ To set it to the 'Report Design' perspective select the grid+ 'open perspective'
 ![Perspective](https://raw.githubusercontent.com/akvo/akvo-reporting/master/Documentation/tutorials/Install_BIRT_Designer/img/100.png?raw=true "perspective")
 
 
-
-
-
-We need to set the perspective to 
-![User ID location](https://raw.githubusercontent.com/akvo/akvo-reporting/master/Documentation/tutorials/embedding_reports/img/20.png?raw=true "User ID location")
 
 
 ##  Example of the httpauthexecute.cf entry 
