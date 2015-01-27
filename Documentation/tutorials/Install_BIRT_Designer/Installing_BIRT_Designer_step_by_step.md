@@ -99,34 +99,51 @@ To set it to the 'Report Design' perspective select the grid+ 'open perspective'
 
 ![Perspective](https://raw.githubusercontent.com/akvo/akvo-reporting/master/Documentation/tutorials/Install_BIRT_Designer/img/100.png?raw=true "perspective")
 
+Congratulations!  BIRT Designer is now running on your machine.
 
 
+##  Notes
 
-##  Example of the httpauthexecute.cf entry 
+### Create a Windows Shortcut
 
-```
-<?xml version="1.0" encoding="UTF-8"?>
-<configuration>
-  <servlet>
-   <httpauthexecute>
-     <username>test</username>
-     <password>test1</password>
-      <registered>
-        <ids>3931</ids>
-        <ids>5593</ids>
-        <ids>7089</ids>
-        <ids>7244</ids>
-         <keys/>
-      </registered>
-      <executeuser>
-        <id>133297</id>
-      </executeuser>
-   </httpauthexecute>
-  </servlet>
-</configuration>
-`
+- From the desktop, right click, choose New -> Shortcut.
+-  For location, enter "C:\Program Files\eclipse\eclipse.exe" (without quotes.)
+-  Click Next
+-  Enter "Eclipse" for the shortcut name.
 
-##  Additional information
+### JDBC Drivers
 
-Additional information can be found on page 76, 'Embedding reports without a login', of the [ReportServer Administrator Guide](https://www.dropbox.com/s/cyrrv8jpc1vctr0/Report_server_Administrator_Guide.pdf?dl=0)
+You will likely want to use your own JDBC driver with BIRT. Use the data source editor's JDBC driver management wizard. To start the wizard, open a BIRT report design, go to the Data Explorer view, right click on "Data Sources" and select "New Data Source". Choose "JDBC Data Source" and click "Next". In the next dialog, choose "Manage Drivers..." to bring up the "Manage JDBC Drivers" dialog.
+In the "JAR Files" tab, click on "Add..." to add the JAR file required by your JDBC driver. Then go to the "Driver" tab to confirm that the list of drivers includes the new drivers added. You may also want to assign a display name and URL template for the new drivers in this tab.
 
+
+### Updating a BIRT Installation
+
+If you have a version of BIRT installed, and want to install a newer version, do the following: 
+- Close Eclipse.
+- Locate your Eclipse plugins directory. If you installed on Windows in the default location, this is "C:\program files\eclipse\plugins".
+- Delete all directories that start with "org.eclipse.birt".
+- Download and install BIRT as described in the BIRT section above.
+- Restart Eclipse with the -clean option: eclipse -clean
+
+## Common Problems
+
+Some problems are due to cached information within Eclipse. Eclipse caches information about plugins for faster startup. Adding BIRT as we did above may result in stale cached information. Symptoms of this problem include: 
+
+- The BIRT perspective does not appear in Eclipse.
+- You receive "An error occurred" dialogs when opening reports or using the BIRT UI.
+
+###Cleaning Cached Plugin Information
+
+- The solution is to clean up the cached information. The recommended practice is to start Eclipse with the -clean option:
+eclipse –clean
+
+####Cleaning the Cache on Windows
+
+If you are on Windows, and are not familiar with how to invoke Eclipse from the command line, do the following: 
+- Choose Start->All Programs->Accessories->Command Prompt
+- Move to the directory where you installed eclipse. If you installed Eclipse in the standard location, enter:
+cd "\Program Files\eclipse"
+- Run Eclipse with the -clean option:
+eclipse -clean
+- Eclipse will restart. Again check for the BIRT perspective.
