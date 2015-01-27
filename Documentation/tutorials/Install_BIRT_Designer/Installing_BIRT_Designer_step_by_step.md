@@ -82,6 +82,12 @@ Select 'Ok'.
 
 ![Ok](https://raw.githubusercontent.com/akvo/akvo-reporting/master/Documentation/tutorials/Install_BIRT_Designer/img/80.png?raw=true "Ok")
 
+Eclipse will start up.
+
+Select 'Workbench', top right, to open BIRT Designer.
+
+![Eclipse](https://raw.githubusercontent.com/akvo/akvo-reporting/master/Documentation/tutorials/Install_BIRT_Designer/img/90.png?raw=true "eclipse")
+
 
 
 ##  Where do I find the 'User ID'?
