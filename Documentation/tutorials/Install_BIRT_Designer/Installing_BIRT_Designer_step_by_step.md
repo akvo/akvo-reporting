@@ -2,7 +2,7 @@
 
 If you want to create or edit report templates you need to install BIRT Designer.  It is not possible to edit '.rptdesign' templates on the ReportServer itself.
 
-This is something that only Report Managers are likely to need.  
+This is something that, initially, only Report Managers are likely to need.  
 
 The ReportServer allows for general execution and parameter selection in complex crosstab reports, as well as creation of basic list reports by users.
 
@@ -25,7 +25,9 @@ To download BIRT All-in-One go to http://download.eclipse.org/birt/downloads/ an
 
 ![Download BIRT ALL-in-One](https://raw.githubusercontent.com/akvo/akvo-reporting/master/Documentation/tutorials/Install_BIRT_Designer/img/10.png?raw=true "Download BIRT")
 
+Select 
 
+![Select the correct package](https://raw.githubusercontent.com/akvo/akvo-reporting/master/Documentation/tutorials/Install_BIRT_Designer/img/11.png?raw=true "Package selection")
 
 
 
