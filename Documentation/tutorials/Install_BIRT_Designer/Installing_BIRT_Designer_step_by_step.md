@@ -64,6 +64,17 @@ To start BIRT Designer open the '*eclipse*' folder and double click on the appli
 ![Eclipse Application](https://raw.githubusercontent.com/akvo/akvo-reporting/master/Documentation/tutorials/Install_BIRT_Designer/img/40.png?raw=true "Eclipse applicaiton file")
 
 
+Mac users may be presented with the below.  Please select 'Open'.
+
+![Open](https://raw.githubusercontent.com/akvo/akvo-reporting/master/Documentation/tutorials/Install_BIRT_Designer/img/50.png?raw=true "Open")
+
+
+BIRT Designer will start up with a 'Workspace Launcher'.  The folder which you set here will be your BIRT working folder.  All of your projects, templates and resources will be stored here so make a note of where it is located.
+
+![Workspace location](https://raw.githubusercontent.com/akvo/akvo-reporting/master/Documentation/tutorials/Install_BIRT_Designer/img/60.png?raw=true "Workspace location")
+
+
+
 ##  Where do I find the 'User ID'?
 
 The 'User ID' can be found in the ReportServer under 'User management/User Root/*Group/*', select the user name.  The number displayed in brackets next to 'Edit user' is the 'User ID'.
