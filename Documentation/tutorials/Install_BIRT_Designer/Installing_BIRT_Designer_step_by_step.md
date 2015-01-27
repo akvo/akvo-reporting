@@ -99,7 +99,7 @@ To set it to the 'Report Design' perspective select the grid+ 'open perspective'
 
 ![Perspective](https://raw.githubusercontent.com/akvo/akvo-reporting/master/Documentation/tutorials/Install_BIRT_Designer/img/100.png?raw=true "perspective")
 
-Select 'Report Design' from the dropdown list.
+Select 'Report Design' from the dropdown list.  Then select 'Ok'.
 
 ![Report design](https://raw.githubusercontent.com/akvo/akvo-reporting/master/Documentation/tutorials/Install_BIRT_Designer/img/111.png?raw=true 'Report design')
 
