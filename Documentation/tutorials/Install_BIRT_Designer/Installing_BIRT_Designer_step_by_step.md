@@ -40,8 +40,11 @@ A download box will appear.  Here you can choose to download and automatically u
 
 ![Box](https://raw.githubusercontent.com/akvo/akvo-reporting/master/Documentation/tutorials/Install_BIRT_Designer/img/14.png?raw=true "Download box")
 
+If you chose to unzip upon completion, the directory '*eclipse*' will automatically be created within the same folder as the download.
 
+If you chose to save the download to a specific location first, you need to locate the download and unzip it.  This will create the '*eclipse*' folder.
 
+Depending on your operating system and your archive utility, you may be asked to unzip the folder to a specific location.  You should unzip it to your 'Applications' or 'Programs' folder.
 
 
 ## Where do I find the 'Key'?
