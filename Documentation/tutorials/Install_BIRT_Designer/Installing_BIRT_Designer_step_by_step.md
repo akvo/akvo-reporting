@@ -53,6 +53,14 @@ Depending on your operating system and your archive utility, you may be asked to
 
 If you were not asked to unzip to a specific location, you will need to add the '*eclipse*' folder to your 'Applications' or 'Programs' folder.
 
+![Applications](https://raw.githubusercontent.com/akvo/akvo-reporting/master/Documentation/tutorials/Install_BIRT_Designer/img/30.png?raw=true "Applications")
+
+To start BIRT Designer open the '*eclipse*' folder and double click on the application file.
+
+Mac OS = *eclipse.app*
+Windows = *eclipse.exe*
+
+![Eclipse Application](https://raw.githubusercontent.com/akvo/akvo-reporting/master/Documentation/tutorials/Install_BIRT_Designer/img/40.png "Eclipse applicaiton file"
 
 
 ![User ID location](https://raw.githubusercontent.com/akvo/akvo-reporting/master/Documentation/tutorials/embedding_reports/img/25.png?raw=true "User ID location")
