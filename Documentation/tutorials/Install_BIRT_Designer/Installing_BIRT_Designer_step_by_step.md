@@ -31,9 +31,17 @@ In this guide we will select 'Mac OS X (Cocoa) 64-bit' version.  This installs '
 
 ![Select a package](https://raw.githubusercontent.com/akvo/akvo-reporting/master/Documentation/tutorials/Install_BIRT_Designer/img/11.png?raw=true "Select a package")
 
-
+Begin the download by selecting the green arrow or the text beside it.
 
 ![Download link](https://raw.githubusercontent.com/akvo/akvo-reporting/master/Documentation/tutorials/Install_BIRT_Designer/img/12.png?raw=true "Download link")
+
+A download box will appear.  Here you can choose to download and automatically open completion OR select to save the download to a specific location on your machine.
+
+![Box](https://raw.githubusercontent.com/akvo/akvo-reporting/master/Documentation/tutorials/Install_BIRT_Designer/img/14.png?raw=true "Download box")
+
+
+
+
 
 ## Where do I find the 'Key'?
 
