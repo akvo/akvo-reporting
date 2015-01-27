@@ -25,7 +25,8 @@ To download BIRT All-in-One go to http://download.eclipse.org/birt/downloads/ an
 
 ![Download BIRT ALL-in-One](https://raw.githubusercontent.com/akvo/akvo-reporting/master/Documentation/tutorials/Install_BIRT_Designer/img/10.png?raw=true "Download BIRT")
 
-Select 
+Select the correct package for your OS.  In this guide we will select 'Mac OS X (Cocoa) 64-bit' version.  This installs 'Eclipse IDE for Java and Report Developers, version Luna Service Release 1 (4.4.1) onto your machine - BIRT Designer is part of this package.
+
 
 ![Select the correct package](https://raw.githubusercontent.com/akvo/akvo-reporting/master/Documentation/tutorials/Install_BIRT_Designer/img/11.png?raw=true "Package selection")
 
