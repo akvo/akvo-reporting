@@ -2,7 +2,7 @@
 
 For the scheduler to work correctly and send out email reports, the mail.cf file needs to be configured.
 
-This file can be found under 'Administration/File System/File Server Root/Etc/Mail' in the Report Server Admin.
+This file can be found under 'Administration/File System/FileServer Root/etc/Mail' in the Report Server Admin.
 
 '''
 <?xml version="1.0" encoding="UTF-8"?>
