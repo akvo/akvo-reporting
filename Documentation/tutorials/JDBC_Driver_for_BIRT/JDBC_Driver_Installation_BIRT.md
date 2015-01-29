@@ -14,7 +14,9 @@ Save the file and make a note of the location.
 
 ![save](https://raw.githubusercontent.com/akvo/akvo-reporting/master/Documentation/tutorials/JDBC_Driver_for_BIRT/img/80.png?raw=true "Save")
 
-This guide assumes that you have a template with a configured PostgreSQL 'Data Source' in place.
+### Install the driver
+
+This tutorial assumes that you have a template with a configured PostgreSQL 'Data Source' in place.
 
 Ensure that you are in the 'Data explorer' perspective of your project.
 
@@ -35,6 +37,10 @@ Select 'Add'
 ![Add](https://raw.githubusercontent.com/akvo/akvo-reporting/master/Documentation/tutorials/JDBC_Driver_for_BIRT/img/60.png?raw=true "Add Driver")
 
 Browse to the .jar file you downloaded at the [beginning of the tutorial](#download-the-jar-file) 
+
+![Browse](https://raw.githubusercontent.com/akvo/akvo-reporting/master/Documentation/tutorials/JDBC_Driver_for_BIRT/img/110.png?raw=true "browse")
+
+
 
 
 
