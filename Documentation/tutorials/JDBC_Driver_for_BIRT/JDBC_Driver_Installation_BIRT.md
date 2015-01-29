@@ -2,6 +2,8 @@
 
 To allow BIRT Designer to communicate correctly with a database setup as as the 'Data Source' you will need to have a JDBC driver installed.  BIRT Designer requires JDBC4 for a PostgreSQL database.
 
+### Download the .jar file
+
 You can download the file from https://jdbc.postgresql.org/download.html
 
 ![JDBC](https://raw.githubusercontent.com/akvo/akvo-reporting/master/Documentation/tutorials/JDBC_Driver_for_BIRT/img/70.png?raw=true "JDBC")
@@ -32,7 +34,7 @@ Select 'Add'
 
 ![Add](https://raw.githubusercontent.com/akvo/akvo-reporting/master/Documentation/tutorials/JDBC_Driver_for_BIRT/img/60.png?raw=true "Add Driver")
 
-Browse to the .jar file you downloaded at the [beginning of the tutorial](#jdbc) 
+Browse to the .jar file you downloaded at the [beginning of the tutorial](#download the .jar file) 
 
 
 
