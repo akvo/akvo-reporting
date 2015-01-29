@@ -2,28 +2,19 @@
 
 ### Drake
 
-Drake wants to run as a user, not as root, so create a drake user. I'm not sure if putting lein and drake in /bin is right or if you create a ~/bin an put the stuff there. In any case drake is setup under ~/ and then I create symlinks. But there may be better ways, consult with the devops pros.
+Simplest way to setup drake is to download the latest drake.jar from the [github repo](https://github.com/Factual/drake) and create a small bash script to be able to run it from anywhere.
 
-	sudo wget -O /bin/lein https://raw.githubusercontent.com/technomancy/leiningen/stable/bin/lein
-	sudo chmod 755 /bin/lein
-	cd
-	git clone https://github.com/Factual/drake.git
-	cd drake/
-	lein uberjar
-	cd ~/drake/target
-	touch drake
+	sudo wget -O /usr/local/bin/drake.jar https://github.com/Factual/drake/releases/download/v0.1.6/drake.jar
+	sudo chmod 755 /usr/local/bin/drake.jar
 
-In the file ```~/drake/target/drake``` enter:
+Create a file ```/usr/local/bin/drake``` and enter:
 
 	#!/bin/bash
-	java -cp $(dirname $0)/drake.jar drake.core "$@"
+	java -cp /usr/local/bin/drake.jar drake.core "$@"
 
+Finally set the perms on the file: 
 
-Set perms on the bash script and create symlinks into /bin for it and the uberjar.
-
-	chmod 755 ~/drake/target/drake
-	sudo ln -s ~/drake/target/drake /bin/drake	
-	sudo ln -s ~/drake/target/drake.jar /bin/drake.jar
+	sudo chmod 755 /usr/local/bin/drake.jar
 
 ### Python:
 
@@ -40,7 +31,7 @@ With pip in place:
 
 	pip install virtualenv
 	
-Create a virtualenv as the drake user:
+Create a virtualenv as the user intended to run drake:
 
 	cd ~/
 	mkdir .envs
