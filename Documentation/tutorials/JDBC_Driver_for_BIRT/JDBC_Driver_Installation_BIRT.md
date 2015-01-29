@@ -8,11 +8,11 @@ You can download the file from https://jdbc.postgresql.org/download.html
 
 ![JDBC](https://raw.githubusercontent.com/akvo/akvo-reporting/master/Documentation/tutorials/JDBC_Driver_for_BIRT/img/70.png?raw=true "JDBC")
 
-To find out more about the various flavours (1-4) JDBC is available in please skip to the [notes](#notes) area at the end of the document.
-
 Save the file and make a note of the location.
 
 ![save](https://raw.githubusercontent.com/akvo/akvo-reporting/master/Documentation/tutorials/JDBC_Driver_for_BIRT/img/80.png?raw=true "Save")
+
+To find out more about the various flavours (1-4) JDBC is available in please skip to the [notes](#notes) area at the end of the document.
 
 ### Install the driver
 
@@ -39,6 +39,19 @@ Select 'Add'
 Browse to the .jar file you downloaded at the [beginning of the tutorial](#download-the-jar-file) 
 
 ![Browse](https://raw.githubusercontent.com/akvo/akvo-reporting/master/Documentation/tutorials/JDBC_Driver_for_BIRT/img/110.png?raw=true "browse")
+
+If you receive the below warning, select 'Open'
+
+![Sure](https://raw.githubusercontent.com/akvo/akvo-reporting/master/Documentation/tutorials/JDBC_Driver_for_BIRT/img/120.png?raw=true "Sure")
+
+You should now see the driver listed in the 'Manage JDBC Drivers' window.  Select 'Ok'.
+
+![Window](https://raw.githubusercontent.com/akvo/akvo-reporting/master/Documentation/tutorials/JDBC_Driver_for_BIRT/img/130.png?raw=true "window")
+
+The new driver will now be visible as the 'Driver Class'.  Select 'Ok'.
+
+![Class](https://raw.githubusercontent.com/akvo/akvo-reporting/master/Documentation/tutorials/JDBC_Driver_for_BIRT/img/150.png?raw=true "Class")
+
 
 
 
