@@ -2,7 +2,7 @@
 
 To allow BIRT Designer to communicate correctly with a database setup as as the 'Data Source' you will need to have a JDBC driver installed.  BIRT Designer requires JDBC4 for a PostgreSQL database.
 
-To find out more about the various flavours (1-4) JDBC is available in please skip to the *Notes* area at the end of the document.
+To find out more about the various flavours (1-4) JDBC is available in please skip to the [below](#Notes) area at the end of the document.
 
 This guide assumes that you have a template with a configured 'Data Source' in place.
 
