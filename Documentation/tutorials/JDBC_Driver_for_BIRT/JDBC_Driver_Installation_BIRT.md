@@ -24,7 +24,7 @@ To find out more about the various flavours (1-4) JDBC is available in please sk
 
 
 
-### NOTES
+### Notes
 
 The JDBC drivers come in four flavours or categories numbered 1-4, which are explained below:
 
