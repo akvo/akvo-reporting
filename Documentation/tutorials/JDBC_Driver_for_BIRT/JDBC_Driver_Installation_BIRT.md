@@ -2,7 +2,21 @@
 
 To allow BIRT Designer to communicate correctly with the database in the chosen 'Data Source' you will need to have a JDBC driver installed.  BIRT Designer requires JDBC4.
 
-To find out more about the various flavours (1-4) JDBC is available in please skip to the *NOTES* area at the end of the document.
+To find out more about the various flavours (1-4) JDBC is available in please skip to the *Notes* area at the end of the document.
+
+This guide assumes that you have a template with a configured 'Data Source' in place.
+
+Ensure that you are in the 'Data explorer' perspective of your project.
+
+Open 'Data Sources' and right click on your data source.  In this case it is 'FLOW'.
+
+![Select Data Source](https://raw.githubusercontent.com/akvo/akvo-reporting/master/Documentation/tutorials/JDBC_Driver_for_BIRT/img/10.png?raw=true "Data Source")
+
+Select 'edit' from the pop-up menu.
+
+![Edit](https://raw.githubusercontent.com/akvo/akvo-reporting/master/Documentation/tutorials/JDBC_Driver_for_BIRT/img/20.png?raw=true "edit")
+
+
 
 
 
