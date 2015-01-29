@@ -56,7 +56,7 @@ The new driver will now be visible as the 'Driver Class'.
 
 To ensure that the driver was installed correctly and that the 'Data Source' can be reached we need to select 'Test Connection'.
 
-![Test](https://raw.githubusercontent.com/akvo/akvo-reporting/master/Documentation/tutorials/JDBC_Driver_for_BIRT/img/170.png/?raw=true "Test")
+![Test](https://raw.githubusercontent.com/akvo/akvo-reporting/master/Documentation/tutorials/JDBC_Driver_for_BIRT/img/170.png?raw=true "Test")
 
 If your driver installed correctly and your database details are correct you should receive the below.  Select 'Ok'.
 
