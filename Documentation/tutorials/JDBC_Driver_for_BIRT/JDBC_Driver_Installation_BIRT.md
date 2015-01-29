@@ -4,7 +4,7 @@ To allow BIRT Designer to communicate correctly with a database setup as as the 
 
 To find out more about the various flavours (1-4) JDBC is available in please skip to the [notes](#notes) area at the end of the document.
 
-This guide assumes that you have a template with a configured 'Data Source' in place.
+This guide assumes that you have a template with a configured PostgreSQL 'Data Source' in place.
 
 Ensure that you are in the 'Data explorer' perspective of your project.
 
@@ -15,6 +15,16 @@ Open 'Data Sources' and right click on your data source.  In this case it is 'FL
 Select 'edit' from the pop-up menu.
 
 ![Edit](https://raw.githubusercontent.com/akvo/akvo-reporting/master/Documentation/tutorials/JDBC_Driver_for_BIRT/img/20.png?raw=true "edit")
+
+Select 'Manage Drivers'
+
+![Manage](https://raw.githubusercontent.com/akvo/akvo-reporting/master/Documentation/tutorials/JDBC_Driver_for_BIRT/img/40.png?raw=true "Manage drivers")
+
+Select 'Add'
+
+![Add](https://raw.githubusercontent.com/akvo/akvo-reporting/master/Documentation/tutorials/JDBC_Driver_for_BIRT/img/60.png?raw=true "Add Driver")
+
+
 
 
 
