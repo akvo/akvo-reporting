@@ -8,20 +8,41 @@ The file can be found under 'Administration/File System/FileServer Root/etc/misc
 <?xml version="1.0" encoding="UTF-8"?>
 <configuration>
   <servlet>
-   <httpauthexecute>
-     <username>test</username>
-     <password>test1</password>
+    <httpauthexecute>
+      <username>test</username>
+      <password>test1</password>
       <registered>
         <ids>3931</ids>
         <ids>5593</ids>
         <ids>7089</ids>
         <ids>7244</ids>
-         <keys/>
+        <keys/>
       </registered>
       <executeuser>
         <id>133297</id>
       </executeuser>
-   </httpauthexecute>
+    </httpauthexecute>
+  </servlet>
+</configuration>
+```
+
+This also works with keys that can be set for a report in the Reportmanager interface: 
+
+```
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration>
+  <servlet>
+    <httpauthexecute>
+      <username>test</username>
+      <password>test1</password>
+      <registered>
+        <keys>report17</keys>
+        <keys>report4711</keys>
+      </registered>
+      <executeuser>
+        <id>133297</id>
+      </executeuser>
+    </httpauthexecute>
   </servlet>
 </configuration>
 ```
