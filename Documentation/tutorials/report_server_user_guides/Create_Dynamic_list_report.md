@@ -53,9 +53,12 @@ Now when we select 'Preview' on the left we will see the 'Identifier' is providi
 
 ![identifier](https://raw.githubusercontent.com/akvo/akvo-reporting/master/Documentation/tutorials/report_server_user_guides/img/130.png?raw=true "identifier")
 
-To remove a selected column select 'Remove column'.
+## Notes:
 
-![remove](https://raw.githubusercontent.com/akvo/akvo-reporting/master/Documentation/tutorials/report_server_user_guides/img/280.png?raw=true "remove")
+- To remove a selected column select 'Remove column'. 
+- Column names can be added to the report by updating the 'Alias' field under 'configure list'.
+- For more detailed information please see page 31, Chapter 6 'Dynamic lists' in the ReportServer userguide:  https://www.dropbox.com/s/fhu3uu9gjb0i0b8/2015-01-02-reportserver-user-guide-2.2_300.pdf?dl=0
+
 
 
 
