@@ -15,6 +15,10 @@ from ghana"
 
 ![reportdetails](https://raw.githubusercontent.com/akvo/akvo-reporting/master/Documentation/tutorials/report_server_user_guides/img/11.png?raw=true "report details")
 
+Select 'apply'.
+
+![apply](https://raw.githubusercontent.com/akvo/akvo-reporting/master/Documentation/tutorials/report_server_user_guides/img/40a.png?raw=true "apply")
+
 Right click on the report name to the left and select 'execute'.
 
 ![execute](https://raw.githubusercontent.com/akvo/akvo-reporting/master/Documentation/tutorials/report_server_user_guides/img/31.png?raw=true "execute")
