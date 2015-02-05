@@ -15,7 +15,7 @@ from ghana"
 
 ![reportdetails](https://raw.githubusercontent.com/akvo/akvo-reporting/master/Documentation/tutorials/report_server_user_guides/img/11.png?raw=true "report details")
 
-Right click on the report and select 'execute'.
+Right click on the report name to the left and select 'execute'.
 
 ![execute](https://raw.githubusercontent.com/akvo/akvo-reporting/master/Documentation/tutorials/report_server_user_guides/img/31.png?raw=true "execute")
 
