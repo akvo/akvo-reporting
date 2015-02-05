@@ -28,6 +28,8 @@ Select 'apply'.
 
 ![apply](https://raw.githubusercontent.com/akvo/akvo-reporting/master/Documentation/tutorials/report_server_user_guides/img/40a.png?raw=true "apply")
 
+## Executing the report
+
 Right click on the report name to the left and select 'execute'.
 
 ![execute](https://raw.githubusercontent.com/akvo/akvo-reporting/master/Documentation/tutorials/report_server_user_guides/img/31.png?raw=true "execute")
@@ -45,6 +47,8 @@ Select 'Preview' in the panel to the left.  You should see the below.
 
 ![preview](https://raw.githubusercontent.com/akvo/akvo-reporting/master/Documentation/tutorials/report_server_user_guides/img/110.png?raw=true "preview")
 
+## Filtering data
+
 We need to filter and configure the data to make it useful for us.  There are many options available under 'configure list'.  For example, we can set the 'identifier' column 'Aggregate' to 'Count' which provides us with a count of the pumps.
 
 ![count](https://raw.githubusercontent.com/akvo/akvo-reporting/master/Documentation/tutorials/report_server_user_guides/img/120.png?raw=true "count")
@@ -52,6 +56,10 @@ We need to filter and configure the data to make it useful for us.  There are ma
 Now when we select 'Preview' on the left we will see the 'Identifier' is providing a count instead of displaying the identifier of each pump.
 
 ![identifier](https://raw.githubusercontent.com/akvo/akvo-reporting/master/Documentation/tutorials/report_server_user_guides/img/130.png?raw=true "identifier")
+
+To filter unwanted data select 'options'
+
+![options](https://raw.githubusercontent.com/akvo/akvo-reporting/master/Documentation/tutorials/report_server_user_guides/img/911.png?raw=true "options")
 
 
 
