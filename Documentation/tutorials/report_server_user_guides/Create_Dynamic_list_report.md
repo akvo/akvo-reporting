@@ -49,6 +49,10 @@ We need to filter and configure the data to make it useful for us.  There are ma
 
 ![count](https://raw.githubusercontent.com/akvo/akvo-reporting/master/Documentation/tutorials/report_server_user_guides/img/120.png?raw=true "count")
 
+Now when we select 'Preview' on the left we will see the 'Identifier' is providing a count instead of displaying the identifier of each pump.
+
+![identifier](https://raw.githubusercontent.com/akvo/akvo-reporting/master/Documentation/tutorials/report_server_user_guides/img/130.png?raw=true "identifier")
+
 
 
 
