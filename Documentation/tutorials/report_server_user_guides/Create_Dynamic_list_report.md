@@ -45,6 +45,12 @@ Select 'Preview' in the panel to the left.  You should see the below.
 
 ![preview](https://raw.githubusercontent.com/akvo/akvo-reporting/master/Documentation/tutorials/report_server_user_guides/img/110.png?raw=true "preview")
 
+We need to filter and configure the data to make it useful for us.  There are many options available under 'configure list'.  For example, we can set the 'identifier' column 'Aggregate' to 'Count' which provides us with a count of the pumps.
+
+![count](https://raw.githubusercontent.com/akvo/akvo-reporting/master/Documentation/tutorials/report_server_user_guides/img/120.png?raw=true "count")
+
+
+
 
 
 
