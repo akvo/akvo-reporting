@@ -53,6 +53,10 @@ Now when we select 'Preview' on the left we will see the 'Identifier' is providi
 
 ![identifier](https://raw.githubusercontent.com/akvo/akvo-reporting/master/Documentation/tutorials/report_server_user_guides/img/130.png?raw=true "identifier")
 
+
+
+
+
 ## Notes:
 
 - To remove a selected column select 'Remove column'. 
