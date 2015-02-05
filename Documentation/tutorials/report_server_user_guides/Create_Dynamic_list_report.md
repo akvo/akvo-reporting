@@ -13,7 +13,7 @@ Add the report details to the 'properties' tab.  Add a report 'name' and 'key' a
 ![reportdetails](https://raw.githubusercontent.com/akvo/akvo-reporting/master/Documentation/tutorials/report_server_user_guides/img/11.png?raw=true "report details")
 
 
-Select the 'FLOW' datasource by browsing with the magnifying glass.
+Select 'Data Source', and select the 'FLOW' datasource by browsing with the magnifying glass.
 
 ![datasource](https://github.com/akvo/akvo-reporting/blob/master/Documentation/tutorials/report_server_user_guides/img/60.png?raw=true "datasource")
 
