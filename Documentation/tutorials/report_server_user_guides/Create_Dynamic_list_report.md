@@ -10,8 +10,8 @@ Log in to the ReportServer and select 'Reportmanager' in the menu to the left.  
 
 Add the report details to the 'properties' tab.  Add a report 'name' and 'key', select the 'FLOW' datasource and add a short query with which to pull all data for the Ghana dataset.  (A specific sql statement can be added, of course, but if you do not know what the dataset contains, this is the easiest way to see what data you want to be able to report on).
 
-'''select *
-from ghana'''
+"select *
+from ghana"
 
 ![reportdetails](https://raw.githubusercontent.com/akvo/akvo-reporting/master/Documentation/tutorials/report_server_user_guides/img/11.png?raw=true "report details")
 
