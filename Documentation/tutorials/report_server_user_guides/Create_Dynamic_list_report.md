@@ -36,6 +36,16 @@ You will now be in the 'Report view'.  Select 'Configure list'.
 
 ![configure list](https://raw.githubusercontent.com/akvo/akvo-reporting/master/Documentation/tutorials/report_server_user_guides/img/920.png?true=raw "configure list")
 
+Now we need to select which columns we would like to include in our report.  Select 'select columns'. A column selection box will popup.  Double click on the column name on the left and it will be added to the column on the right.  When done select 'apply'.
+
+![columns](https://raw.githubusercontent.com/akvo/akvo-reporting/master/Documentation/tutorials/report_server_user_guides/img/290.png?raw=true "columns")
+
+
+
+
+
+
+
 
 
 
