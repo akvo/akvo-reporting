@@ -40,6 +40,12 @@ Now we need to select which columns we would like to include in our report.  Sel
 
 ![columns](https://raw.githubusercontent.com/akvo/akvo-reporting/master/Documentation/tutorials/report_server_user_guides/img/290.png?raw=true "columns")
 
+Select 'Preview' in the panel to the left.  You should see the below.
+
+
+![preview](https://raw.githubusercontent.com/akvo/akvo-reporting/master/Documentation/tutorials/report_server_user_guides/img/110.png?raw=true "preview")
+
+
 
 
 
