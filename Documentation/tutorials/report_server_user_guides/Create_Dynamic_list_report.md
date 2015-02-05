@@ -32,6 +32,10 @@ Right click on the report name to the left and select 'execute'.
 
 ![execute](https://raw.githubusercontent.com/akvo/akvo-reporting/master/Documentation/tutorials/report_server_user_guides/img/31.png?raw=true "execute")
 
+You will now be in the 'Report view'.  Select 'Configure list'.
+
+![configure list](https://raw.githubusercontent.com/akvo/akvo-reporting/master/Documentation/tutorials/report_server_user_guides/img/920.png?true=raw "configure list")
+
 
 
 
