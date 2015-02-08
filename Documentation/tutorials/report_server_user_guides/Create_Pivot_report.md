@@ -2,7 +2,7 @@
 
 This guide assumes that the ReportServer has a 'datasource' called 'FLOW' containing the Akvo FLOW dataset for Ghana.
 
-Creating a Pivot report in ReportServer begins with configuring a basic Dynamic List report - https://github.com/akvo/akvo-reporting/blob/master/Documentation/tutorials/report_server_user_guides/Create_Dynamic_list_report.md
+Creating a Pivot report in ReportServer begins with configuring a basic Dynamic List report - https://github.com/akvo/akvo-reporting/Documentation/tutorials/report_server_user_guides/Create_Dynamic_list_report.md
 
 ##  Converting Dynamic List report to a Pivot report
 
