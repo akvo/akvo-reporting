@@ -37,7 +37,11 @@ We can now drag and drop our selected 'Dimensions' or columns over to the 'Colum
 
 ##  Filtering
 
-To filter data we select the magnifying glass on the 
+In the example above we have some 'junk' data.  Data for '#null' under 'Yearconstr' is included. To filter that data we select the magnifying glass on the 'Yearconstr' ROW.  This provides a pop up with filtering options.
+
+![filter](https://raw.githubusercontent.com/akvo/akvo-reporting/master/Documentation/tutorials/report_server_user_guides/img/220.png?raw=true "filter")
+
+
 
 
 
