@@ -105,6 +105,10 @@ The report can be exported into .html or .pdf as well as other types such as .cs
 
 ![export](https://raw.githubusercontent.com/akvo/akvo-reporting/master/Documentation/tutorials/report_server_user_guides/img/1001.png?raw=true "export")
 
+Example of an export to .html:
+
+![exporthtml](https://raw.githubusercontent.com/akvo/akvo-reporting/master/Documentation/tutorials/report_server_user_guides/img/1002.png?raw=true "exporthtml")
+
 ## Notes:
 
 - For more detailed information please see page 31, Chapter 6 'Dynamic lists' in the ReportServer userguide:  https://www.dropbox.com/s/fhu3uu9gjb0i0b8/2015-01-02-reportserver-user-guide-2.2_300.pdf?dl=0
