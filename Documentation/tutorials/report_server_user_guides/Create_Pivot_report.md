@@ -55,6 +55,18 @@ Now we can see that our data has been cleaned up!
 
 ![clean](https://raw.githubusercontent.com/akvo/akvo-reporting/master/Documentation/tutorials/report_server_user_guides/img/270.png?raw=true "clean")
 
+##  Visualisation
+
+Here we have made some changes to the Pivot, which gives us a count of the number of pumps in various districts and also tells us whether these pumps are functional or not (no/yes).
+
+![pumps](https://raw.githubusercontent.com/akvo/akvo-reporting/master/Documentation/tutorials/report_server_user_guides/img/328.png?raw=true "pumps")
+
+If we now select the coloured graph to the right, above 'export'we can select to view the report as a variety of different graphs.
+
+![graphs](https://raw.githubusercontent.com/akvo/akvo-reporting/master/Documentation/tutorials/report_server_user_guides/img/350.png?raw=true "graphs")
+
+By selecting 'export' you can export the graph into various different file formats.
+
 
 
 
