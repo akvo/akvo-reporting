@@ -101,7 +101,9 @@ If an aggregation function is selected for one of the columns, then all other co
 
 ##  Exporting the report
 
-The report can be exported to 
+The report can be exported into .html or .pdf as well as other types such as .csv.
+
+![export](https://raw.githubusercontent.com/akvo/akvo-reporting/master/Documentation/tutorials/report_server_user_guides/img/1001.png?raw=true "export")
 
 ## Notes:
 
