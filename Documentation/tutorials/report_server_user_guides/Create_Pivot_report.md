@@ -14,7 +14,7 @@ Once you have created your Dynamic list report you can switch to a Pivot report 
 
 ![pivot](https://raw.githubusercontent.com/akvo/akvo-reporting/master/Documentation/tutorials/report_server_user_guides/img/150.png?raw=true "pivot")
 
-##  Configuring a Pivot report
+##  Configuring the Pivot report
 
 We now need to configure the 'Dimensions/Measures'.  This is very similar to setting up the columns to be used in the Dynamic list report, except that you now have a 'Dimension' column with which to group the data.
 
@@ -30,6 +30,8 @@ Once we have configured all required we switch to 'Preview'.
 We can now drag and drop our selected 'Dimensions' or columns over to the 'Columns', 'Rows' and 'Filters' area to build the Pivot.  If we want to remove any, we just drag and drop them back to the left.
 
 ![pivot](https://raw.githubusercontent.com/akvo/akvo-reporting/master/Documentation/tutorials/report_server_user_guides/img/190.png?raw=true "pivot")
+
+![pivot2](https://raw.githubusercontent.com/akvo/akvo-reporting/master/Documentation/tutorials/report_server_user_guides/img/210.png?raw=true "pivot2")
 
 
 
