@@ -55,6 +55,8 @@ Select 'Preview' in the panel to the left.  You should see the below.
 
 ![preview](https://raw.githubusercontent.com/akvo/akvo-reporting/master/Documentation/tutorials/report_server_user_guides/img/110.png?raw=true "preview")
 
+To remove a selected column select 'Remove column'. Column names can be added to the report by updating the 'Alias' field under 'configure list'.
+
 ## Filtering data
 
 We need to filter and configure the data to make it useful for us.  There are many options available under 'configure list'.  For example, we can set the 'identifier' column 'Aggregate' to 'Count' which provides us with a count of the pumps.
@@ -96,12 +98,13 @@ ReportServer provides the following aggregation function
 
 If an aggregation function is selected for one of the columns, then all other columns that do not have an aggregation are considered as grouping columns. It is not possible that a report contains columns that are neither grouping columns nor aggregated columns. To define an aggregation for a column go to list configuration and chose an aggregation function from the list clicking in the appropriate cell in the grid.
 
-##  
+
+##  Exporting the report
+
+The report can be exported to 
 
 ## Notes:
 
-- To remove a selected column select 'Remove column'. 
-- Column names can be added to the report by updating the 'Alias' field under 'configure list'.
 - For more detailed information please see page 31, Chapter 6 'Dynamic lists' in the ReportServer userguide:  https://www.dropbox.com/s/fhu3uu9gjb0i0b8/2015-01-02-reportserver-user-guide-2.2_300.pdf?dl=0
 
 
