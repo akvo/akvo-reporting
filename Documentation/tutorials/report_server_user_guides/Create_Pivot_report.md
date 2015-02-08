@@ -33,13 +33,28 @@ We can now drag and drop our selected 'Dimensions' or columns over to the 'Colum
 
 ![pivot2](https://raw.githubusercontent.com/akvo/akvo-reporting/master/Documentation/tutorials/report_server_user_guides/img/210.png?raw=true "pivot2")
 
+If these are changed at anytime, we need to update the report with the changes by selecting the red 'reload' arrow.
 
+![arrow](https://raw.githubusercontent.com/akvo/akvo-reporting/master/Documentation/tutorials/report_server_user_guides/img/309.png?raw=true "arrow")
 
 ##  Filtering
 
 In the example above we have some 'junk' data.  Data for '#null' under 'Yearconstr' is included. To filter that data we select the magnifying glass on the 'Yearconstr' ROW.  This provides a pop up with filtering options.
 
 ![filter](https://raw.githubusercontent.com/akvo/akvo-reporting/master/Documentation/tutorials/report_server_user_guides/img/220.png?raw=true "filter")
+
+We select to include only the 'no' and 'yes' data by highlighting them and selecting '>'.  Select 'ok'.
+
+Similarly we can select only the years we want to take into account.
+
+![years](https://raw.githubusercontent.com/akvo/akvo-reporting/master/Documentation/tutorials/report_server_user_guides/img/250.png?raw=true "years")
+
+![years2](https://raw.githubusercontent.com/akvo/akvo-reporting/master/Documentation/tutorials/report_server_user_guides/img/260.png?raw=true "years2")
+
+Now we can see that our data has been cleaned up!
+
+![clean](https://raw.githubusercontent.com/akvo/akvo-reporting/master/Documentation/tutorials/report_server_user_guides/img/270.png?raw=true "clean")
+
 
 
 
