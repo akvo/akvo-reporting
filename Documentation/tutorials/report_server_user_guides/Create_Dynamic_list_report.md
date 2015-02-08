@@ -86,13 +86,13 @@ For example, a list of persons with the features sex and age. A possible aggrega
 When using aggregation, we need to distinguish between attributes that describe to which group a record belongs (gender, in the example) and those that are to be summarized to a single value using an aggregation function.
 
 ReportServer provides the following aggregation function
-• Average: Computes the average value per group
-• Count: Counts the number of records per group
-• Maximum: Outputs the maximum value per group
-• Minimum: Outputs the minimum value per group
-• Sum: Computes the sum of all values per group
-• Variance: Computes the statistical variance
-• Count Distinct: Counts the records per group, however, only considers distinct values
+- Average: Computes the average value per group
+- Count: Counts the number of records per group
+- Maximum: Outputs the maximum value per group
+- Minimum: Outputs the minimum value per group
+- Sum: Computes the sum of all values per group
+- Variance: Computes the statistical variance
+- Count Distinct: Counts the records per group, however, only considers distinct values
 
 If an aggregation function is selected for one of the columns, then all other columns that do not have an aggregation are considered as grouping columns. It is not possible that a report contains columns that are neither grouping columns nor aggregated columns. To define an aggregation for a column go to list configuration and chose an aggregation function from the list clicking in the appropriate cell in the grid.
 
