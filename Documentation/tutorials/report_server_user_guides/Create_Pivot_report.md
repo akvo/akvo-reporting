@@ -35,7 +35,9 @@ We can now drag and drop our selected 'Dimensions' or columns over to the 'Colum
 
 
 
+##  Filtering
 
+To filter data we select the magnifying glass on the 
 
 
 
