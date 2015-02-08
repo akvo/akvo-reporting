@@ -14,6 +14,13 @@ Once you have created your Dynamic list report you can switch to a Pivot report 
 
 ##  Configuring a Pivot report
 
+We now need to configure the 'Dimensions/Measures'.  This is very similar to setting up the columns to be used in the Dynamic list report, except that you now have a 'Dimension' column with which to group the data.
+
+![dimensions](https://raw.githubusercontent.com/akvo/akvo-reporting/master/Documentation/tutorials/report_server_user_guides/img/170.png?raw=true "dimensions")
+
+
+
+
 
 
 
