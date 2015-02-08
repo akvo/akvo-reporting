@@ -96,6 +96,8 @@ ReportServer provides the following aggregation function
 
 If an aggregation function is selected for one of the columns, then all other columns that do not have an aggregation are considered as grouping columns. It is not possible that a report contains columns that are neither grouping columns nor aggregated columns. To define an aggregation for a column go to list configuration and chose an aggregation function from the list clicking in the appropriate cell in the grid.
 
+##  
+
 ## Notes:
 
 - To remove a selected column select 'Remove column'. 
