@@ -6,7 +6,7 @@
     <property name="bidiLayoutOrientation">ltr</property>
     <property name="imageDPI">72</property>
     <data-sources>
-        <oda-data-source extensionID="org.eclipse.birt.report.data.oda.jdbc" name="Data Source" id="7">
+        <oda-data-source extensionID="org.eclipse.birt.report.data.oda.jdbc" name="FLOW" id="7">
             <text-property name="displayName"></text-property>
             <list-property name="privateDriverProperties">
                 <ex-property>
@@ -28,6 +28,13 @@
             <property name="odaURL">jdbc:sqlite:{SQLITE_DB}</property>
         </oda-data-source>
     </data-sources>
+    <data-sets>
+        <oda-data-set extensionID="org.eclipse.birt.report.data.oda.jdbc.JdbcSelectDataSet" name="{TABLE_NAME} data set" id="8">
+            <structure name="cachedMetaData"/>
+            <property name="dataSource">FLOW</property>
+            <xml-property name="queryText"><![CDATA[select * from {TABLE_NAME}]]></xml-property>
+        </oda-data-set>
+    </data-sets>
     <styles>
         <style name="report" id="4">
             <property name="fontFamily">sans-serif</property>
