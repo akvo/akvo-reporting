@@ -1,4 +1,4 @@
-# Executing created reports
+# Report Server basics
 
 This guide describes how to login and execute a previously created report, how to store a change as your own variant of the report and how to utilise TeamSpace.
 
