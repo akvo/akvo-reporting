@@ -23,10 +23,8 @@ By opening up the 'Report Root' you will be able to view the folders and reports
 ![reportroot](https://raw.githubusercontent.com/akvo/akvo-reporting/master/Documentation/tutorials/report_server_user_guides/img/1003d.png?raw=true "reportroot")
 
 
-
-
-
 ## Executing the Standard Ghana Crosstab template
+
 
 
 
