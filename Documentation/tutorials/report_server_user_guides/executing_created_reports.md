@@ -10,13 +10,17 @@ Begin by logging in to your ReportServer account at https://reporting.akvo.org/r
 
 Select 'Administration'.  
 
+![administration](https://raw.githubusercontent.com/akvo/akvo-reporting/master/Documentation/tutorials/report_server_user_guides/img/1003b.png?raw=true "administration")
 
 
 Select 'ReportManager'.
 
+![ReportManager](https://raw.githubusercontent.com/akvo/akvo-reporting/master/Documentation/tutorials/report_server_user_guides/img/1003c.png?raw=true "ReportManager")
 
 
 By opening up the 'Report Root' you will be able to view the folders and reports to which you have access.
+
+![reportroot](https://raw.githubusercontent.com/akvo/akvo-reporting/master/Documentation/tutorials/report_server_user_guides/img/1003d.png?raw=true "reportroot")
 
 
 
@@ -25,9 +29,6 @@ By opening up the 'Report Root' you will be able to view the folders and reports
 ## Executing the Standard Ghana Crosstab template
 
 
-
-
-![dynamic](https://raw.githubusercontent.com/akvo/akvo-reporting/master/Documentation/tutorials/report_server_user_guides/img/10.png?raw=true "dynamic list")
 
 
 
