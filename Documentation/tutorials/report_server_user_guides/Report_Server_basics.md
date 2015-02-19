@@ -52,11 +52,16 @@ Add a name for your variant and select 'Create new variant'
 
 ![variant](https://raw.githubusercontent.com/akvo/akvo-reporting/master/Documentation/tutorials/report_server_user_guides/img/1080.png?raw=true "variant")
 
+This variant will now appear below the original report in your working folder.
+
 ##  Executing a report from TeamSpace
 
 Saving or exporting a report or variant to TeamSpace allows you to share a report or report result with others in the team.
 
 Select 'TeamSpace' to view the ones that have been stored for you as examples.  These are links to the 'Ghana_report' folder.
 
+Double click to execute these reports or select once and then select the 'preview' tab.
+
+![teamspace](https://raw.githubusercontent.com/akvo/akvo-reporting/master/Documentation/tutorials/report_server_user_guides/img/1010.png?raw=true "teamspace")
 
 
