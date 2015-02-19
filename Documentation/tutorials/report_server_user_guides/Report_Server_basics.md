@@ -28,20 +28,28 @@ If you create new variants they will be created in this folder. Only your report
 
 **The folder 'Ghana_reports' is a shared folder.  What ever changes you make here will be made for everyone.**
 
-![reportroot](https://raw.githubusercontent.com/akvo/akvo-reporting/master/Documentation/tutorials/report_server_user_guides/img/1003f.png?raw=true "reportroot")
+![folder](https://raw.githubusercontent.com/akvo/akvo-reporting/master/Documentation/tutorials/report_server_user_guides/img/1003f.png?raw=true "folder")
 
-## Executing the Standard Ghana Crosstab template
+## Executing reports
+
+To execute reports from your report folder, right click on the report or variant and select 'execute'.
+
+![executing](https://raw.githubusercontent.com/akvo/akvo-reporting/master/Documentation/tutorials/report_server_user_guides/img/1003d.png?raw=true "executing")
+
+Select to either configure your report or select the preview to view the saved parameters.
+
+![preview](https://raw.githubusercontent.com/akvo/akvo-reporting/master/Documentation/tutorials/report_server_user_guides/img/1050.png?raw=true "preview")
+
+##  Saving a variant of a report
+
+A variant is a copy of the report where certain parameters have been selected.  These parameters do not need to be selected again but are instead saved as a variant.  If the changes are not saved as variant they need to be reset each time you execute the report.
+
+Select 'Save' top right and 
+
+![variant](https://raw.githubusercontent.com/akvo/akvo-reporting/master/Documentation/tutorials/report_server_user_guides/img/1080.png?raw=true "variant")
 
 
 
-
-
-
-##  Executing a variant of the Ghana Crosstab template
-
-##  Executing a dynamic list or pivot report
-
-##  Executing a variant of the dynamic list or pivot report
 
 ##  Executing a report from TeamSpace
 
