@@ -71,11 +71,6 @@ Select various types of graphs.  Here a pie chart has been selected as an exampl
 ![executing](https://raw.githubusercontent.com/akvo/akvo-reporting/master/Documentation/tutorials/report_server_user_guides/img/1052.png?raw=true "executing")
 
 
-
-
-
-
-
 ##  Saving a variant of a report
 
 A variant is a copy of the report where certain parameters have been selected.  These parameters do not need to be selected again but are instead saved as a variant.  If the changes are not saved as variant they need to be reset each time you execute the report.
