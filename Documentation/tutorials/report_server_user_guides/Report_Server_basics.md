@@ -44,14 +44,19 @@ Select to either configure your report or select the preview to view the saved p
 
 A variant is a copy of the report where certain parameters have been selected.  These parameters do not need to be selected again but are instead saved as a variant.  If the changes are not saved as variant they need to be reset each time you execute the report.
 
-Select 'Save' top right and 
+Select 'Save' top right.
+
+![save](https://raw.githubusercontent.com/akvo/akvo-reporting/master/Documentation/tutorials/report_server_user_guides/img/1079.png?raw=true "save")
+
+Add a name for your variant and select 'Create new variant'
 
 ![variant](https://raw.githubusercontent.com/akvo/akvo-reporting/master/Documentation/tutorials/report_server_user_guides/img/1080.png?raw=true "variant")
 
-
-
-
 ##  Executing a report from TeamSpace
+
+Saving or exporting a report or variant to TeamSpace allows you to share a report or report result with others in the team.
+
+Select 'TeamSpace' to view the ones that have been stored for you as examples.  These are links to the 'Ghana_report' folder.
 
 
 
