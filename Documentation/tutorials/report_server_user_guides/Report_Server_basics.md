@@ -30,6 +30,12 @@ If you create new variants they will be created in this folder. Only your report
 
 ![folder](https://raw.githubusercontent.com/akvo/akvo-reporting/master/Documentation/tutorials/report_server_user_guides/img/1003f.png?raw=true "folder")
 
+##  Changing your password
+
+To update your password select the 'welcome, YOURNAME' top right.  A popup will appear, select 'change password'.  Submit when done.  Password changes are immediate.
+
+![password](https://raw.githubusercontent.com/akvo/akvo-reporting/master/Documentation/tutorials/report_server_user_guides/img/1090.png?raw=true "password")
+
 ## Executing reports
 
 To execute reports from your report folder, right click on the report or variant and select 'execute'.
