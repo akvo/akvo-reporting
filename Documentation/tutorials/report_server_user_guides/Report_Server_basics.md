@@ -46,6 +46,36 @@ Select to either configure your report or select the preview to view the saved p
 
 ![preview](https://raw.githubusercontent.com/akvo/akvo-reporting/master/Documentation/tutorials/report_server_user_guides/img/1050.png?raw=true "preview")
 
+##  Playing with Pivots
+
+If you want to play around with Pivot reports a little, try changing 'filters' and make changes to the 'Dimensions/Measures'. As long as you do not select to 'save' top right, the changes will be lost when you close the report (via the 'x'). 
+
+![dimensions](https://raw.githubusercontent.com/akvo/akvo-reporting/master/Documentation/tutorials/report_server_user_guides/img/1040.png?raw=true "measures")
+
+![filters](https://raw.githubusercontent.com/akvo/akvo-reporting/master/Documentation/tutorials/report_server_user_guides/img/1050.png?raw=true "filters")
+
+![filtering](https://raw.githubusercontent.com/akvo/akvo-reporting/master/Documentation/tutorials/report_server_user_guides/img/1051.png?raw=true "filtering")
+
+You can save the changes in a different variant by giving the variant a different name, which means the first variant will remain as it originally was.  See the next section below, 'Saving a variant of a report'.
+
+##  Changing view
+
+View the Pivot as a graph by selecting the 'graph' option top right.
+
+![graphview](https://raw.githubusercontent.com/akvo/akvo-reporting/master/Documentation/tutorials/report_server_user_guides/img/1060.png?raw=true "graphview")
+
+
+Select various types of graphs.  Here a pie chart has been selected as an example.
+
+
+![executing](https://raw.githubusercontent.com/akvo/akvo-reporting/master/Documentation/tutorials/report_server_user_guides/img/1052.png?raw=true "executing")
+
+
+
+
+
+
+
 ##  Saving a variant of a report
 
 A variant is a copy of the report where certain parameters have been selected.  These parameters do not need to be selected again but are instead saved as a variant.  If the changes are not saved as variant they need to be reset each time you execute the report.
