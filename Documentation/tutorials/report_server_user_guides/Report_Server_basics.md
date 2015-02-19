@@ -22,6 +22,13 @@ By opening up the 'Report Root' you will be able to view the folders and reports
 
 ![reportroot](https://raw.githubusercontent.com/akvo/akvo-reporting/master/Documentation/tutorials/report_server_user_guides/img/1003d.png?raw=true "reportroot")
 
+For each of your accounts a folder for reports has been created under your name.  A few reports have been added for you to play with.  
+
+If you create new variants they will be created in this folder. Only your reports will be affected by changes you make here.
+
+**The folder 'Ghana_reports' is a shared folder.  What ever changes you make here will be made for everyone.**
+
+![reportroot](https://raw.githubusercontent.com/akvo/akvo-reporting/master/Documentation/tutorials/report_server_user_guides/img/1003f.png?raw=true "reportroot")
 
 ## Executing the Standard Ghana Crosstab template
 
