@@ -11,15 +11,15 @@
 
 ###################################################################################################
 
-
-import os
+import re
 import sys
 import tablib
 
 from drakeutil import *
 
-CREATE_TABLE_TEMPLATE = "CREATE TABLE {table_name} ({rows});"
-VARCHAR_LEN = 100
+CREATE_TABLE_TEMPLATE = """CREATE TABLE {table_name} (
+    {rows}
+);"""
 
 def infer_datatype(data, column):
     """
@@ -31,7 +31,7 @@ def infer_datatype(data, column):
         """
         determine if we can parse the input string as an integer or a float
         :param s: string to test
-        :return: Postgres field data type
+        :return: Postgres field data type and length if it's varchar
         """
         try:
             _ = int(s)
@@ -46,17 +46,26 @@ def infer_datatype(data, column):
         return "varchar", len(s)
 
     # determine the type of data in each column
-    types, lengths = zip(*[_type(cell) for cell in data[str(column)] if cell is not u''])
-    # if all types are identical for all rows then we use that type
-    types = list(set(types))
-    if len(types) == 1:
-        if types[0] is not 'varchar':
-            return types[0]
-    # mix of ints and floats
-    if 'varchar' not in types:
-        return 'float'
-    # otherwise we use varchar
-    return "varchar({})".format(max(lengths))
+    # first get the type for each row
+    items = [_type(item) for item in data[str(column)] if item is not u'']
+    # is there any data?
+    if items:
+        # data types and lengths if it's varchar
+        types, lengths = zip(*items)
+        # if all types are identical we use that type
+        types = list(set(types))
+        if len(types) == 1:
+            if types[0] is not 'varchar':
+                return types[0]
+        # mix of ints and floats
+        if 'varchar' not in types:
+            return 'float'
+        # otherwise we use varchar
+        return "varchar({})".format(max(lengths))
+    # otherwise return a dummy for an empty column
+    else:
+        return 'varchar(1)'
+
 
 def generate_sql(table_name):
     """
@@ -65,18 +74,30 @@ def generate_sql(table_name):
     :param table_name: optional name of DB table, otherwise the CSV file name's used
     :return: the CREATE TABLE SQL
     """
-    with open(INPUT, 'r') as f:
+    try:
+        file = INPUT
+    except:
+        file = 'data.csv'
+    with open(file, 'rU') as f:
         data = tablib.Dataset()
         data.csv = f.read()
-    field_types = [infer_datatype(data, column) for column in data.headers]
+        # generate field names from column headers
+        # replace " " with "_"
+        data.headers = [re.sub(' +', '_', header) for header in data.headers]
+        # field identifiers start with a letter and then can have letters, numbers and underscores
+        data.headers = [re.sub('^[^[a-zA-Z]]*|\W*', '', header) for header in data.headers]
+        # remove any trailing "_" and make it all lowercase
+        data.headers = [header.strip('_').lower() for header in data.headers]
+
+    data_types = [infer_datatype(data, column) for column in data.headers]
     rows = [
-        "{} {}".format(colname.replace(' ', '_'), field_type) for field_type, colname in zip(
-            field_types, data.headers
+        "{} {}".format(colname, field_type) for field_type, colname in zip(
+            data_types, data.headers
         )
     ]
     return CREATE_TABLE_TEMPLATE.format(
         table_name=table_name,
-        rows=",".join(rows),
+        rows=",\n    ".join(rows),
     )
 
 if __name__ == '__main__':

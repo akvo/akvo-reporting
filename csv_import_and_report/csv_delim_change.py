@@ -15,7 +15,7 @@ def change_delimiter(file_name):
     """ csv converter aimed at use in Drake. takes a ","-delimited csv and returns a tab-delimited one
     """
     DELIMITERS = ","
-    with open(file_name, 'rb') as csvfile, sys.stdout as outfile:
+    with open(file_name, 'rbU') as csvfile, sys.stdout as outfile:
         dialect = csv.Sniffer().sniff(csvfile.read(32768), delimiters=DELIMITERS)
         csvfile.seek(0)
         reader = csv.reader(csvfile, dialect)
