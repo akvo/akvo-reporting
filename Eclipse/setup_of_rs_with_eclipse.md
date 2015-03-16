@@ -6,8 +6,6 @@ Java. RS needs jdk 7 as you know. I've been ""successful" running it using jdk 8
 
 A database. I'm using Postgres, installded on my Mac via homebrew. You need to run the SQL from the [RS dist](http://downloads.sourceforge.net/project/dw-rs/bin/2.2/RS2.2.2-5639-reportserver.zip). In the dist find the appropriate SQL script in the ddl folder.
 
- For use soon.
-
 ###Setup
 
 Create a new workspace.
