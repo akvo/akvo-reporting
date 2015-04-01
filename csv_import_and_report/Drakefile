@@ -2,7 +2,7 @@
 ; and a BIRT report template that only contains a Sqlite data source
 ; Usage:
 
-;   drake -v TABLE_NAME=<table name> [DATE_FORMAT=<python date format string] %load_sqlite %rename_template
+;   drake --var TABLE_NAME=<table name> [--var DATE_FORMAT=<python date format string] %load_sqlite %rename_template
 
 ; where <table_name> is the name of the database table created
 
