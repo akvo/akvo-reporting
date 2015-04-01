@@ -16,12 +16,14 @@ import sys
 import tablib
 
 from drakeutil import *
+from time import strptime
+
 
 CREATE_TABLE_TEMPLATE = """CREATE TABLE {table_name} (
     {rows}
 );"""
 
-def infer_datatype(data, column):
+def infer_datatype(date_format, data, column):
     """
     :param data: the tablib dataset
     :param column: the column name
@@ -33,6 +35,12 @@ def infer_datatype(data, column):
         :param s: string to test
         :return: Postgres field data type and length if it's varchar
         """
+        try:
+            _ = strptime(s, date_format)
+            return "date", 0
+        except ValueError, TypeError:
+            pass
+
         try:
             _ = int(s)
             return "integer", 0
@@ -67,7 +75,7 @@ def infer_datatype(data, column):
         return 'varchar(1)'
 
 
-def generate_sql(table_name):
+def generate_sql(table_name, date_format):
     """
     Generate the sql for the creation of a table holding the data of the CSV
     :param file_name: CSV file
@@ -85,11 +93,15 @@ def generate_sql(table_name):
         # replace " " with "_"
         data.headers = [re.sub(' +', '_', header) for header in data.headers]
         # field identifiers start with a letter and then can have letters, numbers and underscores
-        data.headers = [re.sub('^[^[a-zA-Z]]*|\W*', '', header) for header in data.headers]
+        data.headers = [re.sub('\W*', '', header) for header in data.headers]
         # remove any trailing "_" and make it all lowercase
         data.headers = [header.strip('_').lower() for header in data.headers]
+        # add _ to beginning of identifier if it starts with a number
+        data.headers = ["_{}".format(header) if header and header[0] in [unicode(i) for i in range(10)] else header for header in data.headers]
+        # give empty column headers a label "columnN" where N is the column count
+        data.headers = [header if header else "column{}".format(i) for i, header in enumerate(data.headers)]
 
-    data_types = [infer_datatype(data, column) for column in data.headers]
+    data_types = [infer_datatype(date_format, data, column) for column in data.headers]
     rows = [
         "{} {}".format(colname, field_type) for field_type, colname in zip(
             data_types, data.headers
@@ -102,8 +114,12 @@ def generate_sql(table_name):
 
 if __name__ == '__main__':
     if len(sys.argv) < 1:
-        print "Usage: python csv_to_table.py table_name"
+        print "Usage: python csv_to_table.py table_name [date_format]"
     else:
         table_name = sys.argv[1]
-        print generate_sql(table_name)
-        # print "COPY {} FROM '/path/to/{}' DELIMITER ',' CSV HEADER;".format(table_name, file_name)
+        try:
+            date_format = sys.argv[2]
+        except:
+            # set default date format to "DD-MM-YYYY HH:MM:SS UTC"
+            date_format = "%d-%m-%Y %H:%M:%S UTC"
+        print generate_sql(table_name, date_format)

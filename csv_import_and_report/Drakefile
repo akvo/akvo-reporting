@@ -2,7 +2,7 @@
 ; and a BIRT report template that only contains a Sqlite data source
 ; Usage:
 
-;   drake -v TABLE_NAME=<table name> %load_sqlite %rename_template
+;   drake -v TABLE_NAME=<table name> [DATE_FORMAT=<python date format string] %load_sqlite %rename_template
 
 ; where <table_name> is the name of the database table created
 
@@ -12,11 +12,11 @@
 
 DB_USER=flow
 VENV_PYTHON=/home/gabriel/.envs/drake/bin/python
-
+DATE_FORMAT="%d-%m-%Y %H:%M:%S UTC"
 
 ; run the python script that takes the .csv and returns the CREATE TABLE SQL
 create.sql <- data.csv, csv_to_table_def.py
-    $VENV_PYTHON $INPUT1 $TABLE_NAME > $OUTPUT
+    $VENV_PYTHON $INPUT1 $TABLE_NAME "$DATE_FORMAT" > $OUTPUT
 
 
 ; create the Postgres database table
