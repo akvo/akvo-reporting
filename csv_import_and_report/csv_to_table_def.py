@@ -11,6 +11,8 @@
 
 ###################################################################################################
 
+
+import collections
 import re
 import sys
 import tablib
@@ -82,6 +84,35 @@ def generate_sql(table_name, date_format):
     :param table_name: optional name of DB table, otherwise the CSV file name's used
     :return: the CREATE TABLE SQL
     """
+    def headers_to_identifiers(headers):
+        """generate DB field names from column headers"""
+        # replace " " with "_"
+        headers = [re.sub(' +', '_', header) for header in headers]
+        # field identifiers start with a letter and then can have letters, numbers and underscores
+        headers = [re.sub('\W*', '', header) for header in headers]
+        # remove any trailing "_" and make it all lowercase
+        headers = [header.strip('_').lower() for header in headers]
+        # prepend _ to identifier if it starts with a number
+        headers = [
+                "_{}".format(header)
+                if header and header[0] in [unicode(i) for i in range(10)]
+                else header
+                for header in headers
+        ]
+        # give empty column headers a label "columnN" where N is the column count
+        headers = [header if header else "column{}".format(i) for i, header in enumerate(headers)]
+        # truncate to 63 characters, the default identifier length in postgres
+        headers = [header[:63] for header in headers]
+        return headers
+
+    def dedupe(headers):
+        """Check for duplicate generated field names"""
+        # TODO: right now we only abort if we find dupes.
+        # If this is a real problem ,a real solution is probably needed...
+        dupes = [item for item, count in collections.Counter(headers).items() if count > 1]
+        assert dupes == [], "Duplicate DB field names, aborting"
+        return headers
+
     try:
         file = INPUT
     except:
@@ -89,17 +120,10 @@ def generate_sql(table_name, date_format):
     with open(file, 'rU') as f:
         data = tablib.Dataset()
         data.csv = f.read()
-        # generate field names from column headers
-        # replace " " with "_"
-        data.headers = [re.sub(' +', '_', header) for header in data.headers]
-        # field identifiers start with a letter and then can have letters, numbers and underscores
-        data.headers = [re.sub('\W*', '', header) for header in data.headers]
-        # remove any trailing "_" and make it all lowercase
-        data.headers = [header.strip('_').lower() for header in data.headers]
-        # add _ to beginning of identifier if it starts with a number
-        data.headers = ["_{}".format(header) if header and header[0] in [unicode(i) for i in range(10)] else header for header in data.headers]
-        # give empty column headers a label "columnN" where N is the column count
-        data.headers = [header if header else "column{}".format(i) for i, header in enumerate(data.headers)]
+        data.headers = headers_to_identifiers(data.headers)
+        # look for duplicate identifiers
+        data.headers = dedupe(data.headers)
+
 
     data_types = [infer_datatype(date_format, data, column) for column in data.headers]
     rows = [
