@@ -39,7 +39,7 @@ def infer_datatype(date_format, data, column):
         """
         try:
             _ = strptime(s, date_format)
-            return "date", 0
+            return "timestamp", 0
         except ValueError, TypeError:
             pass
 
