@@ -13,6 +13,7 @@
   "dependencies": {
     "backbone": "0.5.3",
     "browserify-shim": "3.8.5",
+    "jquery-ui": "1.10.4",
     "underscore": "1.1.6"
   },
   "browserify": {
