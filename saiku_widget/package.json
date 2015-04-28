@@ -1,0 +1,100 @@
+{
+  "devDependencies": {
+    "browserify": "^9.0.8",
+    "gulp": "^3.8.11",
+    "gulp-concat-css": "^2.2.0",
+    "gulp-minify-css": "^1.1.0",
+    "gulp-sourcemaps": "^1.5.2",
+    "gulp-uglify": "^1.2.0",
+    "gulp-util": "^3.0.4",
+    "vinyl-buffer": "^1.0.0",
+    "vinyl-source-stream": "^1.1.0"
+  },
+  "dependencies": {
+    "backbone": "0.5.3",
+    "browserify-shim": "3.8.5",
+    "underscore": "1.1.6"
+  },
+  "browserify": {
+    "transform": [
+      "browserify-shim"
+    ]
+  },
+  "browser": {
+    "jquery": "./src/jquery.1.7.2.js",
+    "jquery-ui": "./node_modules/jquery-ui/jquery-ui.js",
+    "protovis": "./src/protovis.3.3.0.js",
+    "protovis-msie": "./src/protovis-msie.js",
+    "def": "./src/ccc_chart-def.js",
+    "json": "./src/backbone-json2.js",
+    "underscore": "./node_modules/underscore/underscore.js",
+    "settings": "./src/settings.js",
+    "backbone": "./node_modules/backbone/backbone.js",
+    "chart-plugin": "./src/ccc_chart-plugin.js",
+    "chart-pvc": "./src/ccc_chart-pvc-r2.0.js",
+    "tipsy": "./src/tipsy.js",
+    "tipsy-jquery": "./src/tipsy.jquery.js",
+    "main": "./src/main.js"
+  },
+  "browserify-shim": {
+    "jquery": "$",
+    "jquery-ui": {
+      "depends": [
+        "jquery:jQuery"
+      ]
+    },
+    "protovis": "pv",
+    "protovis-msie": {
+      "depends": [
+        "protovis:pv"
+      ]
+    },
+    "def": "def",
+    "json": "JSON",
+    "underscore": "_",
+    "settings": {
+      "exports": "isIE",
+      "depends": [
+        "underscore:_"
+      ]
+    },
+    "backbone": {
+      "exports": "Backbone",
+      "depends": [
+        "underscore:_"
+      ]
+    },
+    "chart-pvc": {
+      "exports": "pvc",
+      "depends": [
+        "def:def",
+        "protovis:pv"
+      ]
+    },
+    "chart-plugin": {
+      "exports": "Chart",
+      "depends": [
+        "backbone:Backbone",
+        "settings: isIE",
+        "chart-pvc: pvc"
+      ]
+    },
+    "tipsy": {
+      "depends": [
+        "jquery:$",
+        "protovis:pv"
+      ]
+    },
+    "tipsy-jquery": {
+      "depends": [
+        "jquery:jQuery"
+      ]
+    },
+    "main": {
+      "depends": [
+        "backbone:Backbone",
+        "chart-plugin:Chart"
+      ]
+    }
+  }
+}
