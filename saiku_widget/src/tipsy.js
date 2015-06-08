@@ -1,5 +1,5 @@
 // src/tipsy.js
-(function(){
+(function($){
 
     var _nextTipsyId = 0;
 
@@ -707,4 +707,4 @@
         };
     }
 
-}());
+}(jQuery));

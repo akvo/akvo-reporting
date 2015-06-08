@@ -12,37 +12,61 @@
 // http://127.0.0.1:8888/resources/saiku/js/saiku/Settings.js direct source?
 // http://127.0.0.1:8888/resources/saiku/js/saiku/plugins/CCC_Chart/plugin.js direct source?
 
+'use strict';
 
-//'use strict';
-//
-//var $ = require('./src/jquery.1.7.2');
-var $ = require('jquery');
 
-require('jquery-ui');
+(function() {
+  require('./src/jquery.1.7.2');
+  jQuery.noConflict(true);
 
-require('./src/purl.2.3.1');
+  require('jquery-ui');
 
-require('underscore');
+  require('./src/purl.2.3.1');
 
-require('./src/backbone-json2');
+  require('underscore');
 
-require('backbone');
+  require('./src/backbone-json2');
 
-require('./src/protovis.3.3.0');
+  require('backbone');
 
-require('./src/protovis-msie');
+  require('./src/protovis.3.3.0');
 
-require('./src/tipsy');
+  require('./src/protovis-msie');
 
-require('./src/tipsy.jquery');
+  require('./src/tipsy');
 
-require('./src/ccc_chart-def');
+  require('./src/tipsy.jquery');
 
-require('./src/ccc_chart-pvc-r2.0');
+  require('./src/ccc_chart-def');
 
-require('./src/settings');
+  require('./src/ccc_chart-pvc-r2.0');
 
-require('./src/ccc_chart-plugin');
+  require('./src/settings');
 
-require('./src/main');
-//require('./src/test');
+  require('./src/ccc_chart-plugin');
+
+  var main = require('./src/main');
+
+  jQuery( document ).ready(function( $ ) {
+    var jqVersion = $().jquery;
+    console.log("script: " + jqVersion);
+    main($);
+  });
+})();
+
+//function compareKeys(keys, oldKeys) {
+//  var found, i, j;
+//  console.log("New batch:");
+//  for (i in keys) {
+//    found = false;
+//    for (j in oldKeys) {
+//      if (keys[i] == oldKeys[j]) {
+//        var found = true;
+//        break;
+//      }
+//    }
+//    if (!found)
+//      console.log(keys[i]);
+//  }
+//}
+
