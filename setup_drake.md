@@ -4,7 +4,7 @@
 
 Simplest way to setup drake is to download the latest drake.jar from the [github repo](https://github.com/Factual/drake/releases) and create a small bash script to be able to run it from anywhere.
 
-	sudo wget -O /usr/local/bin/drake.jar https://github.com/Factual/drake/releases/download/v0.1.6/drake.jar
+	sudo wget -O /usr/local/bin/drake.jar https://github.com/Factual/drake/releases/download/v0.1.7/drake.jar
 	sudo chmod 755 /usr/local/bin/drake.jar
 
 Create a file ```/usr/local/bin/drake``` and enter:
@@ -14,7 +14,7 @@ Create a file ```/usr/local/bin/drake``` and enter:
 
 Finally set the perms on the file: 
 
-	sudo chmod 755 /usr/local/bin/drake.jar
+	sudo chmod 755 /usr/local/bin/drake
 
 ### Python:
 
