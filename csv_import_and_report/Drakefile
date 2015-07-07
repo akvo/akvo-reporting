@@ -10,7 +10,7 @@
 
 ; TODO: better file input and output management. Dropbox perhaps?
 
-DB_USER=flow
+DB_USER=flowreports
 VENV_PYTHON=/home/gabriel/.envs/drake/bin/python
 DATE_FORMAT="%d-%m-%Y %H:%M:%S UTC"
 
@@ -18,18 +18,18 @@ DATE_FORMAT="%d-%m-%Y %H:%M:%S UTC"
 create.sql <- data.csv, csv_to_table_def.py
     $VENV_PYTHON $INPUT1 $TABLE_NAME "$DATE_FORMAT" > $OUTPUT
 
-
 ; create the Postgres database table
 ; create_pg.log is a log file of the output of running the Prostgres commands
 create_pg.log <- create.sql, data.csv
+    export PGPASSWORD=''
     # remove an old instance of the table
-    psql -U postgres -d flow -c "DROP TABLE IF EXISTS $TABLE_NAME;" > $OUTPUT
+    psql -U flowreports -h psql.test.akvo-ops.org -d flowreports -c "DROP TABLE IF EXISTS $TABLE_NAME;" > $OUTPUT
     # run the SQL creating the table
-    psql -U postgres -d flow -c "$(cat $INPUT0)" >> $OUTPUT
+    psql -U flowreports -h psql.test.akvo-ops.org -d flowreports -c "$(cat $INPUT0)" >> $OUTPUT
     # copy the .csv data into the new table
-    psql -U postgres -d flow -c "COPY $TABLE_NAME FROM '$INPUT1' DELIMITER ',' CSV HEADER;" >> $OUTPUT
+    psql -U flowreports -h psql.test.akvo-ops.org -d flowreports -c "\COPY $TABLE_NAME FROM '$INPUT1' DELIMITER ',' CSV HEADER;" >> $OUTPUT
     # set privileges on the table
-    psql -U postgres -d flow -c "GRANT ALL ON $TABLE_NAME TO $DB_USER;" >> $OUTPUT
+    psql -U flowreports -h psql.test.akvo-ops.org -d flowreports -c "GRANT ALL ON $TABLE_NAME TO $DB_USER;" >> $OUTPUT
 
 
 ; create a sqlite-compatible CSV file (tab delimited)

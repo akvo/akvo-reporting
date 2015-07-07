@@ -45,7 +45,7 @@ def infer_datatype(date_format, data, column):
 
         try:
             _ = int(s)
-            return "integer", 0
+            return "bigint", 0
         except ValueError:
             pass
         try:
