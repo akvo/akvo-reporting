@@ -19,8 +19,9 @@ def change_delimiter(file_name):
         dialect = csv.Sniffer().sniff(csvfile.read(32768), delimiters=DELIMITERS)
         csvfile.seek(0)
         reader = csv.reader(csvfile, dialect)
+        reader = [r for r in reader]
         writer = csv.writer(outfile, delimiter='\t')
-        writer.writerows(reader)
+        writer.writerows(reader[1:])
 
 if __name__ == '__main__':
     # either get file name from command line arg or from Drake INPUT var
